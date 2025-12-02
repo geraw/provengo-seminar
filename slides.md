@@ -18,21 +18,23 @@ Ben-Gurion University of the Negev
 
 - We wanted to prove that our research ideas are practical
 
-- We identified a domain where BP seems most advantageous based on a MEMIMAD project we ran with IAI
+- We identified a domain where BP seems most advantageous 
+  - Based on a MEMIMAD project we ran with IAI
 
-- We contemplated other options using a project we ran with students in the management department (Israel <-> Canada collaboration)
+- We contemplated other options 
+  - With students in the management department 
 
 - We identified a need and a market:
   - Testing complex software is hard
   - Concurrency and business logic lead to subtle bugs
   - Traditional test design misses rare behaviors
-  - Behavioral Programming (BP) offers a powerful alternative
   - We believed BP could revolutionize test design
 
 </div>
-<div class="flex items-center justify-center h-full">
+<div class="flex flex-col items-center justify-center h-full gap-4">
 
-  <img src="/research_to_startup_comic.png" class="max-h-70 w-auto" alt="Research to Startup" />
+  <img src="/search_for_industrial_use_comic.png" class="max-h-50 w-auto rounded-lg shadow-lg border border-gray-200" alt="Search for Industrial Use" />
+  <img src="/research_to_startup_comic.png" class="max-h-50 w-auto rounded-lg shadow-lg border border-gray-200" alt="Research to Startup" />
 
 </div>
 </div>
