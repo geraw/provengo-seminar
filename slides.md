@@ -14,11 +14,30 @@ Ben-Gurion University of the Negev
 # Motivation  
 ### Why We Founded Provengo
 
-- Testing complex software is hard  
-- Concurrency, interleavings, and business logic lead to subtle bugs  
-- Traditional test design misses rare behaviors  
-- Behavioral Programming (BP) offered a powerful alternative  
-- We believed BP could revolutionize test design
+<div class="grid grid-cols-[60%_40%] gap-4">
+<div>
+
+- We wanted to prove that our research ideas are practical
+
+- We identified a domain where BP seems most advantageous based on a MEMIMAD project we ran with IAI
+
+- We contemplated other options using a project we ran with students in the management department (Israel <-> Canada collaboration)
+
+- We identified a need and a market:
+
+  - Testing complex software is hard
+  - Concurrency, interleavings, and business logic lead to subtle bugs
+  - Traditional test design misses rare behaviors
+  - Behavioral Programming (BP) offers a powerful alternative
+  - We believed BP could revolutionize test design
+
+</div>
+<div class="flex items-center justify-center">
+
+![Research to Startup](/research_to_startup_comic.png)
+
+</div>
+</div>
 
 ---
 
