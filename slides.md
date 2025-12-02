@@ -23,7 +23,6 @@ Ben-Gurion University of the Negev
 - We contemplated other options using a project we ran with students in the management department (Israel <-> Canada collaboration)
 
 - We identified a need and a market:
-
   - Testing complex software is hard
   - Concurrency and business logic lead to subtle bugs
   - Traditional test design misses rare behaviors
