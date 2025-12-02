@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "slidev",
-    "build": "slidev build --base /",
-    "export": "slidev export --output dist/slides.pdf"
+    "dev": "slidev slides.md",
+    "build": "slidev build slides.md --base /",
+    "export": "slidev export slides.md --output dist/slides.pdf"
   },
   "devDependencies": {
     "@slidev/cli": "latest",
