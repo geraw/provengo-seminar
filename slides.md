@@ -11,8 +11,7 @@ Ben-Gurion University of the Negev
 
 ---
 
-# Motivation  
-### Why We Founded Provengo
+# Why We Founded Provengo
 
 <div class="grid grid-cols-[60%_40%] gap-4">
 <div>
@@ -26,15 +25,15 @@ Ben-Gurion University of the Negev
 - We identified a need and a market:
 
   - Testing complex software is hard
-  - Concurrency, interleavings, and business logic lead to subtle bugs
+  - Concurrency and business logic lead to subtle bugs
   - Traditional test design misses rare behaviors
   - Behavioral Programming (BP) offers a powerful alternative
   - We believed BP could revolutionize test design
 
 </div>
-<div class="flex items-center justify-center">
+<div class="flex items-center justify-center h-full">
 
-![Research to Startup](/research_to_startup_comic.png)
+  <img src="/research_to_startup_comic.png" class="max-h-70 w-auto" alt="Research to Startup" />
 
 </div>
 </div>
