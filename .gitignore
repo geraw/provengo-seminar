@@ -1,0 +1,5 @@
+node_modules
+dist
+.slidev
+.vscode
+.DS_Store
