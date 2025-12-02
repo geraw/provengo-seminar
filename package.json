@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "slidev slides.md",
-    "build": "slidev build slides.md --base /",
+    "build": "slidev build slides.md --base /provengo-seminar/",
     "export": "slidev export slides.md --output dist/slides.pdf"
   },
   "devDependencies": {
