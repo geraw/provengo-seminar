@@ -72,6 +72,40 @@ Ben-Gurion University of the Negev
 
 ---
 
+# Behavioral Programming (BP)
+
+<div class="grid grid-cols-[30%_5%_30%_5%_30%] gap-2 items-center justify-center mt-10">
+  <div class="flex flex-col items-center">
+    <h3 class="mb-4">Requirements</h3>
+    <img src="bp_requirements.png" class="h-40 w-auto object-contain" />
+  </div>
+  
+  <div class="flex justify-center">
+    <span class="text-6xl font-bold text-orange-500">+</span>
+  </div>
+
+  <div class="flex flex-col items-center">
+    <h3 class="mb-4">Execution engine</h3>
+    <img src="bp_engine.png" class="h-40 w-auto object-contain" />
+  </div>
+
+  <div class="flex justify-center">
+    <span class="text-6xl font-bold text-orange-500">=</span>
+  </div>
+
+  <div class="flex flex-col items-center">
+    <h3 class="mb-4">Behavior</h3>
+    <img src="bp_behavior.png" class="h-40 w-auto object-contain" />
+  </div>
+</div>
+
+<div class="absolute bottom-5 left-10 text-xs text-gray-500">
+  <p>1. David Harel, Assaf Marron, Gera Weiss. "Behavioral programming." Communications of the ACM 55.7 (2012): 90-100.</p>
+  <p>2. Achiya Elyasaf. "Context-Oriented Behavioral Programming." Information and Software Technology 133 (2021): 106504.</p>
+</div>
+
+---
+
 # BP Example
 
 ```javascript
