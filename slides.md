@@ -104,15 +104,49 @@ Ben-Gurion University of the Negev
 
 # BP Example
 
+<div class="grid grid-cols-2 gap-4">
+<div>
+
 ```javascript
-bthread("inventoryCheck", function() {
+bthread("Hot", function() {
   while(true) {
-    request("AddToCart");
-    waitFor("InventoryConfirmed");
-    block("CheckoutUntilConfirmed");
+    request("HOT")
   }
-});
+})
+
+bthread("Cold", function() {
+  while(true) {
+    request("COLD")
+  }
+})
 ```
+
+```javascript
+bthread("Interleave", function() {
+  while(true) {
+    waitFor("HOT")
+    // Wait for COLD, Block HOT
+    sync({waitFor:"COLD", block:"HOT"})
+  }
+})
+```
+
+</div>
+
+<div>
+
+### Execution Trace
+
+<div class="bg-gray-100 p-4 rounded h-full font-mono text-sm">
+  <div v-click>1. HOT</div>
+  <div v-click>2. COLD</div>
+  <div v-click>3. HOT</div>
+  <div v-click>4. COLD</div>
+  <div v-click>...</div>
+</div>
+
+</div>
+</div>
 ---
 
 # BPjs — open-source JavaScript engine for BP  
