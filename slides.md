@@ -107,7 +107,7 @@ Ben-Gurion University of the Negev
 <div class="grid grid-cols-2 gap-4">
 <div>
 
-```javascript {2,7,13,20|3,7,14,20|3,8,13,21|8,14,20|13,21}
+```javascript {all|2,7,13,20|3,7,14,20|3,8,13,21|8,14,20|13,21}
 bthread("Hot", function() {
   request("HOT")
   request("HOT")
@@ -177,12 +177,12 @@ bthread("No two COLD in a row", function() {
 
 - **Execution**
   ```bash
-  java -jar BPjs.jar test.js
+  bpjs test.js
   ```
 
-- **Verification**
+- **Verification**:   
   ```bash
-  java -jar BPjs.jar --verify test.js
+  bpjs --verify test.js 
   ```
 
 - **Open Source**
