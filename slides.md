@@ -71,7 +71,7 @@ Ben-Gurion University of the Negev
   <div class="flex flex-col items-center text-center">
     <h3 class="mb-4">Requirements</h3>
     <img src="/bp_requirements_lego.png" class="h-40 w-auto object-contain" />
-    <p class="text-xs mt-2">Scenarios specifying what may, must, and must not happen over time</p>
+    <p class="text-xs mt-2">Scenarios specifying what may, must, <br> and must-not happen over time</p>
   </div>
   
   <div class="flex justify-center mt-20">
@@ -165,34 +165,41 @@ bthread("No two COLD in a row", function() {
 </div>
 ---
 
-# BPjs — open-source JavaScript engine for BP  
+# BPjs — an open-source JavaScript engine for BP  
 
-- "Industrial" grade 
+<div class="grid grid-cols-[70%_30%] gap-4">
+<div>
 
-- Execution:
+- **"Industrial" Grade**
+  - Robust execution and verification
+  - Integration with external systems
+  - Plug-N-Play architecture
 
-```
-bpjs run test.js
+- **Execution**
+  ```bash
+  java -jar BPjs.jar test.js
+  ```
 
-```
+- **Verification**
+  ```bash
+  java -jar BPjs.jar --verify test.js
+  ```
 
-- Verification
+- **Open Source**
+  - <carbon-logo-github class="inline-block mr-1" /> [github.com/bthink-bgu/bpjs](https://github.com/bthink-bgu/bpjs)
 
-```
-bpjs verify test.js
-```
+</div>
 
-- Integration with the external world
-
-
-- A Plug-N-Play architecture
-
-
-- URL: https://github.com/bthink-bgu/bpjs
+<div class="flex flex-col items-center justify-center">
+  <img src="/michael_bar_sinai.png" class="rounded-full w-40 h-40 border-4 border-gray-200 shadow-lg mb-4" />
+  <p class="text-center text-sm font-bold">Michael Bar-Sinai</p>
+  <p class="text-center text-xs text-gray-500">Lead Developer</p>
+</div>
+</div>
 
 ---
 
-# The future of programming
+# Our view of the future of programming
 
 <div class="grid grid-cols-2 gap-8 mt-10">
   <div class="flex flex-col items-center text-center">
