@@ -6,6 +6,9 @@ This repository contains a Slidev presentation for the talk:
 > **From Behavioral Programming Research to Provengo**  
 > Achiya Elyasaf & Gera Weiss, Ben-Gurion University of the Negev
 
+[View Slides Online](https://geraw.github.io/provengo-seminar/) | [Download PDF](https://github.com/geraw/provengo-seminar/actions)
+
+
 ## Local Development
 
 Requirements:
