@@ -62,13 +62,6 @@ Ben-Gurion University of the Negev
 
 
 
----
-
-# Behavioral Programming — Core Idea
-
-- System modeled as **behavior threads (b-threads)**  
-- Threads coordinate by requesting, waiting for, blocking events  
-- Independent scenarios jointly determine allowed events
 
 ---
 
@@ -81,7 +74,7 @@ Ben-Gurion University of the Negev
   </div>
   
   <div class="flex justify-center">
-    <span class="text-6xl font-bold text-orange-500">+</span>
+    <span class="text-6xl font-bold text-gray-500">+</span>
   </div>
 
   <div class="flex flex-col items-center">
@@ -90,7 +83,7 @@ Ben-Gurion University of the Negev
   </div>
 
   <div class="flex justify-center">
-    <span class="text-6xl font-bold text-orange-500">=</span>
+    <span class="text-6xl font-bold text-gray-500">=</span>
   </div>
 
   <div class="flex flex-col items-center">
@@ -99,9 +92,9 @@ Ben-Gurion University of the Negev
   </div>
 </div>
 
-<div class="absolute bottom-5 left-10 text-xs text-gray-500">
+<div class="absolute bottom-20 left-10 text-sm text-gray-500">
   <p>1. David Harel, Assaf Marron, Gera Weiss. "Behavioral programming." Communications of the ACM 55.7 (2012): 90-100.</p>
-  <p>2. Achiya Elyasaf. "Context-Oriented Behavioral Programming." Information and Software Technology 133 (2021): 106504.</p>
+  <p>2. Achiya Elyasaf. "Context-Oriented Behavioral Programming." Information and Software Technology 133 (2021): 106504.</p> 
 </div>
 
 ---
@@ -146,9 +139,21 @@ bpjs verify test.js
 
 ---
 
-# Horse vs. Car
+# The future of programming
 
+<div class="grid grid-cols-2 gap-8 mt-10">
+  <div class="flex flex-col items-center text-center">
+    <h3 class="mb-4 text-xl font-bold">Traditional Programming</h3>
+    <img src="/traditional_programming_car.png" class="h-60 w-auto rounded-lg shadow-lg mb-4" />
+    <p class="text-sm">Like driving a car: The driver must control every detail <br> (steering, gas, brakes) at all times.</p>
+  </div>
 
+  <div class="flex flex-col items-center text-center">
+    <h3 class="mb-4 text-xl font-bold">Future Programming</h3>
+    <img src="/future_programming_horse.png" class="h-60 w-auto rounded-lg shadow-lg mb-4" />
+    <p class="text-sm">Like driving a carriage: The driver specifies the general direction, and the horse handles the details (obstacles, footing).</p>
+  </div>
+</div>
 
 ---
 
