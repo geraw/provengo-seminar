@@ -109,15 +109,15 @@ Ben-Gurion University of the Negev
 
 ```javascript
 bthread("Hot", function() {
-  while(true) {
-    request("HOT")
-  }
+  request("HOT")
+  request("HOT")
+  request("HOT")
 })
 
 bthread("Cold", function() {
-  while(true) {
-    request("COLD")
-  }
+  request("COLD")
+  request("COLD")
+  request("COLD")
 })
 ```
 
