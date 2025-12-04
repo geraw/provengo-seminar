@@ -77,7 +77,7 @@ Ben-Gurion University of the Negev
 <div class="grid grid-cols-[30%_5%_30%_5%_30%] gap-2 items-center justify-center mt-10">
   <div class="flex flex-col items-center">
     <h3 class="mb-4">Requirements</h3>
-    <img src="/bp_requirements.png" class="h-40 w-auto object-contain" />
+    <img src="/bp_requirements_lego.png" class="h-40 w-auto object-contain" />
   </div>
   
   <div class="flex justify-center">
@@ -86,7 +86,7 @@ Ben-Gurion University of the Negev
 
   <div class="flex flex-col items-center">
     <h3 class="mb-4">Execution engine</h3>
-    <img src="/bp_engine.png" class="h-40 w-auto object-contain" />
+    <img src="/bp_engine_lego.png" class="h-40 w-auto object-contain" />
   </div>
 
   <div class="flex justify-center">
@@ -95,7 +95,7 @@ Ben-Gurion University of the Negev
 
   <div class="flex flex-col items-center">
     <h3 class="mb-4">Behavior</h3>
-    <img src="/bp_behavior.png" class="h-40 w-auto object-contain" />
+    <img src="/bp_behavior_lego.png" class="h-40 w-auto object-contain" />
   </div>
 </div>
 
