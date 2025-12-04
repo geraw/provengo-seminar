@@ -107,9 +107,8 @@ Ben-Gurion University of the Negev
 <div class="grid grid-cols-2 gap-4">
 <div>
 
-```javascript {2,8,15|3,8,16|3,9,15|4,9,16|4,10,15}
+```javascript {2,7,13,20|3,7,14,20|3,8,13,21|4,8,14,20|4,13,14,21}
 bthread("Hot", function() {
-  request("HOT")
   request("HOT")
   request("HOT")
 })
@@ -117,15 +116,22 @@ bthread("Hot", function() {
 bthread("Cold", function() {
   request("COLD")
   request("COLD")
-  request("COLD")
 })
 
-bthread("Interleave", function() {
+bthread("No two HOT in a row", function() {
   while(true) {
     waitFor("HOT")
     sync({waitFor:"COLD", block:"HOT"})
   }
 })
+
+bthread("No two COLD in a row", function() {
+  while(true) {
+    waitFor("COLD")
+    sync({waitFor:"HOT", block:"COLD"})
+  }
+})
+
 ```
 
 </div>
@@ -134,12 +140,16 @@ bthread("Interleave", function() {
 
 ### Execution Trace
 
-<div class="bg-gray-100 p-4 rounded h-full font-mono text-sm">
+<div class="bg-gray-100 p-4 rounded  font-mono text-sm">
   <div v-click="1">1. HOT</div>
   <div v-click="2">2. COLD</div>
   <div v-click="3">3. HOT</div>
   <div v-click="4">4. COLD</div>
-  <div v-click="5">...</div>
+</div>
+
+<div class="mt-4 text-sm text-gray-600">
+  <p class="mb-2">An event can be triggered if it is requested and not blocked.</p>
+  <p>A b-thread is advanced if it either requests or waits for the triggered event.</p>
 </div>
 
 </div>
