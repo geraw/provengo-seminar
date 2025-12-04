@@ -147,9 +147,15 @@ bthread("No two COLD in a row", function() {
   <div v-click="4">4. COLD</div>
 </div>
 
-<div class="mt-4 text-sm text-gray-600">
-  <p class="mb-2">An event can be triggered if it is requested and not blocked.</p>
-  <p>A b-thread is advanced if it either requests or waits for the triggered event.</p>
+<div class="mt-4 relative">
+  <div class="bg-[#2d3e30] p-4 rounded-lg border-4 border-[#8b5a2b] shadow-xl transform -rotate-1">
+    <h4 class="text-white/90 text-center mb-2 font-hand text-lg border-b border-white/20 pb-1">Execution Rules</h4>
+    <ul class="list-disc list-inside text-white/90 font-hand text-sm space-y-2">
+      <li>Event triggered if requested & not blocked</li>
+      <li>B-thread advances if it requests or waits for the event</li>
+    </ul>
+  </div>
+  <!-- Teacher placeholder or emoji if possible, but keeping it simple for now -->
 </div>
 
 </div>
