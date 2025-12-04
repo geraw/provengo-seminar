@@ -107,7 +107,7 @@ Ben-Gurion University of the Negev
 <div class="grid grid-cols-2 gap-4">
 <div>
 
-```javascript
+```javascript {2,8,15|3,8,16|3,9,15|4,9,16|4,10,15}
 bthread("Hot", function() {
   request("HOT")
   request("HOT")
@@ -119,13 +119,10 @@ bthread("Cold", function() {
   request("COLD")
   request("COLD")
 })
-```
 
-```javascript
 bthread("Interleave", function() {
   while(true) {
     waitFor("HOT")
-    // Wait for COLD, Block HOT
     sync({waitFor:"COLD", block:"HOT"})
   }
 })
@@ -138,11 +135,11 @@ bthread("Interleave", function() {
 ### Execution Trace
 
 <div class="bg-gray-100 p-4 rounded h-full font-mono text-sm">
-  <div v-click>1. HOT</div>
-  <div v-click>2. COLD</div>
-  <div v-click>3. HOT</div>
-  <div v-click>4. COLD</div>
-  <div v-click>...</div>
+  <div v-click="1">1. HOT</div>
+  <div v-click="2">2. COLD</div>
+  <div v-click="3">3. HOT</div>
+  <div v-click="4">4. COLD</div>
+  <div v-click="5">...</div>
 </div>
 
 </div>
