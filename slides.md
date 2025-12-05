@@ -165,35 +165,44 @@ bthread("No two COLD in a row", function() {
 </div>
 ---
 
-# BPjs — an open-source JavaScript engine for BP  
+# BPjs: an open-source implementation of BP
 
-<div class="grid grid-cols-[70%_30%] gap-4">
+<div class="grid grid-cols-[60%_40%] gap-4">
 <div>
 
-- **"Industrial" Grade**
-  - Robust execution and verification
-  - Integration with external systems
-  - Plug-N-Play architecture
+- **Embedded Formal Model**
+  - Uses **Rhino** to run JavaScript within a Java application
+  - The JavaScript code is a formal behavioral model
 
-- **Execution**
-  ```bash
-  bpjs test.js
-  ```
+- **Verification Tools**
+  - Built-in support for **Safety** and **Liveness** verification
 
-- **Verification**:   
-  ```bash
-  bpjs --verify test.js 
-  ```
+- **Rich Ecosystem**
+  - Open architecture that allows easy extension
+  - For example, **COBP** adds context to BP models
 
 - **Open Source**
   - <carbon-logo-github class="inline-block mr-1" /> [github.com/bthink-bgu/bpjs](https://github.com/bthink-bgu/bpjs)
 
 </div>
 
-<div class="flex flex-col items-center justify-center">
-  <img src="/michael_bar_sinai.png" class="rounded-full w-40 h-40 border-4 border-gray-200 shadow-lg mb-4" />
-  <p class="text-center text-sm font-bold">Michael Bar-Sinai</p>
-  <p class="text-center text-xs text-gray-500">Lead Developer</p>
+<div class="relative flex flex-col items-center justify-center h-full">
+  <img src="/bpjs_architecture_lego_v2.png" class="w-full rounded-lg shadow-lg border border-gray-200" alt="BPjs Architecture" />
+
+<div class="absolute right-2 bottom-2 flex flex-col items-center bg-white/80 p-1 rounded-lg backdrop-blur-sm shadow-sm leading-none">
+  <img src="/michael_bar_sinai.png"
+       class="rounded-full w-14 h-14 border-2 border-gray-200 shadow-md mb-[1px]" />
+
+  <div class="text-center leading-tight text-[9px]">
+    <div class="font-bold">Michael Bar-Sinai</div>
+    <div class="text-gray-500 -mt-[1px]">Lead Developer</div>
+  </div>
+</div>
+
+
+
+
+
 </div>
 </div>
 
