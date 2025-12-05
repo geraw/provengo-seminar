@@ -228,11 +228,33 @@ bthread("No two COLD in a row", function() {
 
 # Satelite project 
 
-- IAI liked it but didn't use it
+<div class="grid grid-cols-2 gap-4 h-full">
+<div class="text-sm">
 
-- We registered a patent on BPjs for testing
+- **Scenario-Based On-Board Software**
+  - Modular design using "scenarios" and "anti-scenarios"
+  - Direct translation of specifications to code
 
-- We understood that testing is a possible penetration point
+- **Formal Verification**
+  - Automated model-checking for safety and robustness
+  - Automated test scenario generation
+
+  - We used **BPjs** to generate test scenarios
+- **Hybrid Laboratory**
+  - We programmed a **real space-ready hardware**
+
+- **Outcome**
+  - Demonstrated viability but not adopted for flight
+  - Led to patent on BPjs for testing
+  - Pivot to testing as a market entry point
+
+</div>
+
+<div class="flex flex-col items-center justify-center h-full">
+  <img src="/iai_logo.png" class="h-16 mb-4 object-contain" alt="IAI Logo" />
+  <Youtube id="spmH5sjIwN8" width="100%" height="250" />
+</div>
+</div>
 
 
 
