@@ -304,10 +304,33 @@ bthread("No two COLD in a row", function() {
 
 # Founding Provengo (2021)
 
-- OASIS accelerator helped shape an initial business plan  
-- Founders: Achiya Elyasaf, Gera Weiss, Michael Bar-Sinai, Dror Elad  
+<div class="grid grid-cols-[60%_40%] gap-4">
+<div>
 
-<img src="/provengo_team.png" class="h-80 w-auto rounded-lg shadow-lg border border-gray-200 mt-4" alt="Provengo Team" />
+<img src="/provengo_logo_transparent.png" class="h-12 w-auto mb-6 object-contain" alt="Provengo Logo" />
+
+- **We believed we can revolutionize testing**
+  - Unlock the potential of mapping the test space
+  - Generate tests automatically from lightweight models
+
+- **Focus on specification**
+  - Testers focus on *what* to test (requirements)
+  - Algorithms build the test suites
+
+- **Requirement-centric analysis**
+  - Test results analyzed relative to requirements
+  - Coverage guaranteed against requirements, not just code
+
+</div>
+
+<div class="flex flex-col items-center justify-center gap-4">
+  <img src="/provengo_mbt_diagram.png" class="h-70 w-auto rounded-lg shadow-md border border-gray-200 object-contain" alt="Model-Based Testing Concept" />
+  <div class="flex flex-col items-center">
+    <img src="/provengo_founders_comic.png" class="h-30 w-auto rounded-lg shadow-xl border-0 border-gray-100 object-cover block" alt="Provengo Founders" />
+    <p class="text-[10px] -mt-5 text-gray-500 italic text-center leading-none relative z-10">Supported by OASIS accelerator</p>
+  </div>
+</div>
+</div>
 
 
 
