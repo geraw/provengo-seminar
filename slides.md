@@ -325,9 +325,9 @@ bthread("No two COLD in a row", function() {
 
 <div class="flex flex-col items-center justify-center gap-4">
   <img src="/provengo_mbt_diagram.png" class="h-70 w-auto rounded-lg shadow-md border border-gray-200 object-contain" alt="Model-Based Testing Concept" />
-  <div class="flex flex-col items-center">
+  <div class="relative flex flex-col items-center">
     <img src="/provengo_founders_comic.png" class="h-30 w-auto rounded-lg shadow-xl border-0 border-gray-100 object-cover block" alt="Provengo Founders" />
-    <p class="text-[10px] -mt-5 text-gray-500 italic text-center leading-none relative z-10">Supported by OASIS accelerator</p>
+    <p class="absolute -bottom-10 text-[10px] text-center leading-none bg-white/80 px-1 rounded">Supported by OASIS</p>
   </div>
 </div>
 </div>
