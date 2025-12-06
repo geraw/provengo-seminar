@@ -190,7 +190,7 @@ bthread("No two COLD in a row", function() {
   <img src="/bpjs_architecture_lego_v2.png" class="w-full rounded-lg shadow-lg border border-gray-200" alt="BPjs Architecture" />
 
 <div class="absolute right-2 bottom-2 flex flex-col items-center bg-white/80 p-1 rounded-lg backdrop-blur-sm shadow-sm leading-none">
-  <img src="/michael_bar_sinai.png"
+  <img src="/michael_bar_sinai_nobg.png"
        class="rounded-full w-14 h-14 border-2 border-gray-200 shadow-md mb-[1px]" />
 
   <div class="text-center leading-tight text-[9px]">
@@ -229,30 +229,43 @@ bthread("No two COLD in a row", function() {
 # Satelite project 
 
 <div class="grid grid-cols-2 gap-4 h-full">
-<div class="text-sm">
+<div class="text-sm leading-tight">
 
 - **Scenario-Based On-Board Software**
   - Modular design using "scenarios" and "anti-scenarios"
   - Direct translation of specifications to code
-
+  - Real-time execution
+  <br>
+  <br>
 - **Formal Verification**
   - Automated model-checking for safety and robustness
-  - Automated test scenario generation
-
-  - We used **BPjs** to generate test scenarios
+  - Automated test scenario generation using **BPjs**
+  <br>
+  <br>
 - **Hybrid Laboratory**
-  - We programmed a **real space-ready hardware**
-
+  - Programmed **real space-ready hardware** and **OS**
+  <br>
+  <br>
 - **Outcome**
-  - Demonstrated viability but not adopted for flight
+  - IAI approved the project, but not ready for adoption
   - Led to patent on BPjs for testing
   - Pivot to testing as a market entry point
-
 </div>
 
-<div class="flex flex-col items-center justify-center h-full">
-  <img src="/iai_logo.png" class="h-16 mb-4 object-contain" alt="IAI Logo" />
-  <Youtube id="spmH5sjIwN8" width="100%" height="250" />
+<div class="relative h-full w-full">
+  <div class="absolute inset-0 flex items-center justify-center">
+    <Youtube id="spmH5sjIwN8" width="100%" height="300" />
+  </div>
+
+  <img src="/iai_logo_new.png" class="absolute -top-10 right-10 h-16 object-contain" alt="IAI Logo" />
+  
+  <div class="absolute bottom-8 right-0 flex items-center gap-3 bg-white/90 p-2 rounded-lg shadow-sm border border-gray-100">
+    <img src="/aviran_sadon_nobg.png" class="w-12 h-12 rounded-full border border-gray-200 object-cover" />
+    <div class="text-xs text-left leading-tight">
+      <div class="font-bold">Aviran Sadon</div>
+      <div class="text-gray-500">Lead Developer</div>
+    </div>
+  </div>
 </div>
 </div>
 
