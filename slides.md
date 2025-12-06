@@ -189,13 +189,11 @@ bthread("No two COLD in a row", function() {
 <div class="relative flex flex-col items-center justify-center h-full">
   <img src="/bpjs_architecture_lego_v2.png" class="w-full rounded-lg shadow-lg border border-gray-200" alt="BPjs Architecture" />
 
-<div class="absolute right-2 bottom-2 flex flex-col items-center bg-white/80 p-1 rounded-lg backdrop-blur-sm shadow-sm leading-none">
-  <img src="/michael_bar_sinai_nobg.png"
-       class="rounded-full w-14 h-14 border-2 border-gray-200 shadow-md mb-[1px]" />
-
-  <div class="text-center leading-tight text-[9px]">
+<div class="absolute right-2 bottom-2 flex items-center gap-3 bg-white/90 p-2 rounded-lg shadow-sm border border-gray-100">
+  <img src="/michael_bar_sinai_nobg.png" class="w-12 h-12 rounded-full border border-gray-200 object-cover" />
+  <div class="text-xs text-left leading-tight">
     <div class="font-bold">Michael Bar-Sinai</div>
-    <div class="text-gray-500 -mt-[1px]">Lead Developer</div>
+    <div class="text-gray-500">Lead Developer</div>
   </div>
 </div>
 
@@ -276,10 +274,16 @@ bthread("No two COLD in a row", function() {
 # Why BP Fits Testing
 
 
-- Tests are stories  
-- Many bugs appear only in interleavings  
-- BP naturally generates interleavings  
-- Combines human scenario insight with automation
+- **Tests are Stories**  
+  BP scenarios directly map to requirements and user stories
+- **Taming Complexity**  
+  Naturally handles complex interleavings and race conditions where bugs hide
+- **Shift Left**  
+  Catches design flaws early by executing the specification itself
+- **Separation of Concerns**  
+  Decouples test logic ("what to test") from technical implementation ("how to drive the UI")
+- **Smart Automation**  
+  Combines human insight with automated exploration to generate meaningful test coverage
 
 ---
 
