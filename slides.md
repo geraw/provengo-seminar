@@ -274,16 +274,29 @@ bthread("No two COLD in a row", function() {
 # Why BP Fits Testing
 
 
+<div class="grid grid-cols-[60%_40%] gap-4">
+<div>
+
 - **Tests are Stories**  
   BP scenarios directly map to requirements and user stories
+
 - **Taming Complexity**  
   Naturally handles complex interleavings and race conditions where bugs hide
+  
 - **Shift Left**  
   Catches design flaws early by executing the specification itself
+
 - **Separation of Concerns**  
   Decouples test logic ("what to test") from technical implementation ("how to drive the UI")
+
 - **Smart Automation**  
   Combines human insight with automated exploration to generate meaningful test coverage
+
+</div>
+<div class="flex items-center justify-center">
+  <img src="/provengo_workflow_comic.png" class="max-h-80 w-auto rounded-lg shadow-lg border border-gray-200" alt="Provengo Workflow" />
+</div>
+</div>
 
 ---
 
