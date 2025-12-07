@@ -438,22 +438,23 @@ layout: default
 layout: default
 ---
 
-<div class="grid grid-cols-[60%_40%] gap-4 items-center">
-<div>
-
 <img src="/provengo_logo_transparent.png" class="absolute top-6 right-6 w-24 z-50" />
 
 # The Future is a Living Model
 ## A Single Source of Truth
 
-- **Executable Model**: Not a document, but a dynamic representation.
-- **Capabilities**: Query, visualize, and generate tests from one source.
-- **Bridge**: Connects Business (Analyst), Development, and QA.
-- **Goal**: Everyone builds and tests the same system.
+<div class="grid grid-cols-[55%_45%] gap-8 items-center mt-8">
+<div class="space-y-4">
+
+- <strong class="text-blue-800">Executable Model</strong>: It’s no longer a static document, but a dynamic, runnable representation of the system.
+
+- <strong class="text-blue-800">Capabilities</strong>: You can query logic, visualize flows, and generate test scenarios from one central source.
+- <strong class="text-blue-800">The Bridge</strong>: It connects Business (Analyst), Development, and QA around a shared language.
+- <strong class="text-blue-800">The Goal</strong>: Ensure everyone builds, tests, and validates the exact same system behavior.
 
 </div>
 <div class="flex items-center justify-center">
-  <img src="/slides_images/single_source_of_truth.png" class="h-60 rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
+  <img src="/slides_images/single_source_of_truth.png" class="h-80 w-auto rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
 </div>
 </div>
 
@@ -465,11 +466,23 @@ layout: default
 
 # Provengo: Scenario-Driven Model-Based Testing
 
-- **Active Requirements**: Makes system requirements executable.
-- **Living Models**: Codify user stories and business logic.
-- **SDMBT**: Scenario-Driven Model-Based Testing.
-    - Start with simple models.
-    - Incrementally augment with more rules.
+<div class="grid grid-cols-[55%_45%] gap-8 items-center mt-8">
+<div class="space-y-4">
+
+- <strong class="text-blue-800">Active Requirements</strong>: Transforms static requirements into executable code that validates the system.
+
+- <strong class="text-blue-800">Living Models</strong>: We directly codify user stories, flows, and business constraints into a single coherent model.
+- <strong class="text-blue-800">SDMBT Approach</strong>:
+    - **Start Simple**: Begin with basic scenarios <br> (Happy Paths).
+    
+    - **Iterate**: Incrementally layer on complex constraints and edge cases.
+    - **Scale**: The model grows with the system, remaining a valid test source.
+
+</div>
+<div class="flex items-center justify-center">
+  <img src="/slides_images/scenario_driven_mbt.png" class="h-90 w-auto rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
+</div>
+</div>
 
 ---
 layout: default
