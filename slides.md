@@ -301,7 +301,7 @@ bthread("No two COLD in a row", function() {
 
 </div>
 <div class="flex items-center justify-center">
-  <img src="/provengo_workflow_comic.png" class="h-100 w-100 rounded-lg" alt="Provengo Workflow" />
+  <img src="/provengo_workflow_comic.png" class="h-90 w-200 rounded-lg" alt="Provengo Workflow" />
 </div>
 </div>
 
@@ -632,7 +632,7 @@ layout: default
 - <strong class="text-blue-800">The SUT</strong>: An online store (Magento).
 - <strong class="text-blue-800">The Approach</strong>:
     - **Separation of Concerns**: We modeled the low-level interactions (Login, Add to Cart) separately from the high-level integration model.
-    - **Goal**: Verify end-to-end flows like "Buy a specific item".
+    - **Goal**: Verify end-to-end flows.
 - <strong class="text-blue-800">The Bugs</strong>:
     - Found critical logic bugs in Magento related to inventory management and checkout flows.
 
