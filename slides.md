@@ -390,6 +390,8 @@ A layered architecture for model-based testing:
 
 ---
 
+<img src="/provengo_logo_transparent.png" class="absolute top-6 right-6 w-24 z-50" />
+
 # Living Requirements
 ## What if your requirements document wasn't a dead artifact?
 
@@ -415,6 +417,8 @@ layout: default
 <div class="grid grid-cols-[60%_40%] gap-4 items-center">
 <div>
 
+<img src="/provengo_logo_transparent.png" class="absolute top-6 right-6 w-24 z-50" />
+
 # The Blueprint is Brittle
 ## Why Traditional BDD is Reaching Its Limits
 
@@ -437,6 +441,8 @@ layout: default
 <div class="grid grid-cols-[60%_40%] gap-4 items-center">
 <div>
 
+<img src="/provengo_logo_transparent.png" class="absolute top-6 right-6 w-24 z-50" />
+
 # The Future is a Living Model
 ## A Single Source of Truth
 
@@ -455,6 +461,8 @@ layout: default
 layout: default
 ---
 
+<img src="/provengo_logo_transparent.png" class="absolute top-6 right-6 w-24 z-50" />
+
 # Provengo: Scenario-Driven Model-Based Testing
 
 - **Active Requirements**: Makes system requirements executable.
@@ -466,6 +474,8 @@ layout: default
 ---
 layout: default
 ---
+
+<img src="/provengo_logo_transparent.png" class="absolute top-6 right-6 w-24 z-50" />
 
 # Encode Complex Business Rules
 ## Transform Ambiguity into Executable Logic
@@ -486,6 +496,8 @@ layout: default
 ---
 layout: default
 ---
+
+<img src="/provengo_logo_transparent.png" class="absolute top-6 right-6 w-24 z-50" />
 
 # From Abstract Model to Concrete Automation
 
@@ -508,6 +520,8 @@ layout: default
 <div class="grid grid-cols-[60%_40%] gap-4 items-center">
 <div>
 
+<img src="/provengo_logo_transparent.png" class="absolute top-6 right-6 w-24 z-50" />
+
 # A Complete, Local-First Workflow
 
 - **Local Execution**: Command-line tool, runs on your machine.
@@ -529,6 +543,8 @@ layout: default
 layout: default
 ---
 
+<img src="/provengo_logo_transparent.png" class="absolute top-6 right-6 w-24 z-50" />
+
 # Case Study: Insurance Claims Processing
 
 | Challenge | Solution | Impact |
@@ -539,6 +555,8 @@ layout: default
 ---
 layout: default
 ---
+
+<img src="/provengo_logo_transparent.png" class="absolute top-6 right-6 w-24 z-50" />
 
 # Case Study: Major Bank SSO
 
@@ -553,6 +571,8 @@ layout: default
 
 <div class="grid grid-cols-[60%_40%] gap-4 items-center">
 <div>
+
+<img src="/provengo_logo_transparent.png" class="absolute top-6 right-6 w-24 z-50" />
 
 # The Bigger Picture
 ## From Complexity to Clarity and Cost Savings
@@ -576,6 +596,8 @@ layout: default
 layout: default
 ---
 
+<img src="/provengo_logo_transparent.png" class="absolute top-6 right-6 w-24 z-50" />
+
 # Robust & Secure Toolchain
 
 - **Local Execution**: Runs on local machine/CI. No internet required.
@@ -589,6 +611,8 @@ layout: default
 layout: default
 ---
 
+<img src="/provengo_logo_transparent.png" class="absolute top-6 right-6 w-24 z-50" />
+
 # Ready to Simplify the Complex?
 
 - **Transform**: Intricate processes -> Streamlined systems.
@@ -601,6 +625,8 @@ layout: default
 ---
 
 
+<img src="/provengo_logo_transparent.png" class="absolute top-6 right-6 w-24 z-50" />
+
 # Success Stories
 
 - Customers with complex concurrency patterns  
@@ -609,6 +635,8 @@ layout: default
 
 ---
 
+<img src="/provengo_logo_transparent.png" class="absolute top-6 right-6 w-24 z-50" />
+
 # Financial Reality
 
 - Challenging deep-tech fundraising environment  
@@ -616,6 +644,8 @@ layout: default
 - Focus on customer pilots and demonstrating value
 
 ---
+
+<img src="/provengo_logo_transparent.png" class="absolute top-6 right-6 w-24 z-50" />
 
 # Future Vision
 
@@ -627,6 +657,8 @@ layout: default
 - Fully managed SaaS
 
 ---
+
+<img src="/provengo_logo_transparent.png" class="absolute top-6 right-6 w-24 z-50" />
 
 # Research ↔ Industry Reflections
 
