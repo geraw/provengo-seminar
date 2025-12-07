@@ -253,7 +253,7 @@ bthread("No two COLD in a row", function() {
 
 <div class="relative h-full w-full">
   <div class="absolute inset-0 flex items-center justify-center">
-    <Youtube id="spmH5sjIwN8" width="100%" height="300" />
+    <Youtube id="spmH5sjIwN8" :width="560" :height="315" />
   </div>
 
   <img src="/iai_logo_new.png" class="absolute -top-10 right-10 h-16 object-contain" alt="IAI Logo" />
@@ -508,6 +508,15 @@ vehicleType.whenSetTo("sports car")
 
 // A truck can't have 6 seats
 vehicleType.whenSetTo("truck")
+    .field(seatCount).cannotBe(6);
+```
+
+</div>
+<div class="flex items-center justify-center">
+  <img src="/slides_images/untangling_rules.png" class="h-80 w-auto rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
+</div>
+</div>
+
 ---
 
 <img src="/provengo_logo_transparent.png" class="absolute top-6 right-6 w-24 z-50" />
@@ -639,6 +648,22 @@ layout: default
 
 <div class="grid grid-cols-[55%_45%] gap-8 items-center mt-8">
 <div class="space-y-4">
+
+- <strong class="text-blue-800">Local Execution</strong>: The engine runs 100% on your local machine or CI server. No dependency on 3rd party servers.
+
+- <strong class="text-blue-800">Zero Data Transfer</strong>: Your sensitive models, test data, and reports never leave your network. No cloud upload.
+
+- <strong class="text-blue-800">Integrations</strong>:
+    - **Selenium Manager**: Automatic management and synchronization of web drivers.
+
+    - **IDE Support**: Best-in-class VSCode extension for modeling and debugging.
+
+- <strong class="text-blue-800">Cross-Platform</strong>: Full support for Linux, Mac, and Windows environments.
+
+</div>
+<div class="flex items-center justify-center">
+  <img src="/slides_images/secure_toolchain.png" class="h-100 w-auto rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
+</div>
 </div>
 
 ---
@@ -670,9 +695,6 @@ layout: default
 
 ---
 
-
-<img src="/provengo_logo_transparent.png" class="absolute top-6 right-6 w-24 z-50" />
-
 # Success Stories
 
 <div class="grid grid-cols-[55%_45%] gap-8 items-center mt-8">
@@ -694,8 +716,6 @@ layout: default
 
 ---
 
-<img src="/provengo_logo_transparent.png" class="absolute top-6 right-6 w-24 z-50" />
-
 # Financial Reality 
 
 <div class="grid grid-cols-[55%_45%] gap-8 items-center mt-8">
@@ -716,8 +736,6 @@ layout: default
 </div>
 
 ---
-
-<img src="/provengo_logo_transparent.png" class="absolute top-6 right-6 w-24 z-50" />
 
 # Future Vision
 
@@ -741,11 +759,10 @@ layout: default
 
 ---
 
-<img src="/provengo_logo_transparent.png" class="absolute top-6 right-6 w-24 z-50" />
 
-# Research ↔ Industry Reflections
+# Conclusion: Research ↔ Industry Reflections
 
-<div class="grid grid-cols-[55%45%] gap-8 items-center mt-8">
+<div class="grid grid-cols-[55%_45%] gap-8 items-center mt-8">
 <div class="space-y-4">
 
 - <strong class="text-blue-800">The Feedback Loop</strong>:
