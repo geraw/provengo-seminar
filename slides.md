@@ -1,6 +1,7 @@
 ---
 theme: default
 title: "From Behavioral Programming Research to Provengo"
+colorSchema: "light"
 ---
 
 # From Research to Startup  
@@ -253,7 +254,7 @@ bthread("No two COLD in a row", function() {
 
 <div class="relative h-full w-full">
   <div class="absolute inset-0 flex items-start justify-center pt-4">
-    <Youtube id="spmH5sjIwN8" :width="560" :height="315" autoplay />
+    <Youtube id="spmH5sjIwN8" :width="560" :height="315" autoplay="true" />
   </div>
 
   <img src="/iai_logo_new.png" class="absolute -top-20 right-10 h-16 object-contain" alt="IAI Logo" />
@@ -718,49 +719,6 @@ layout: default
 
 ---
 
-# Harsh Reality 
-
-<div class="grid grid-cols-[55%_45%] gap-8 items-center mt-8">
-<div class="space-y-4">
-
-- <strong class="text-blue-800">Deep Tech Environment</strong>: Navigating a challenging fundraising landscape requires proving deep technical value over hype.
-
-- <strong class="text-blue-800">Lean Engineering</strong>: We are a lean startup, building a robust core with a focused team.
-
-- <strong class="text-blue-800">Customer-Centric Growth</strong>:
-    - **Pilots**: Demonstrating immediate ROI in real-world environments.
-    - **Value**: Shifting from "potential" to "proven impact".
-
-</div>
-<div class="flex items-center justify-center">
-<img src="/slides_images/coding_under_fire.jpg" class="h-80 w-auto rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
-</div>
-</div>
-
----
-
-# Future Vision
-
-<div class="grid grid-cols-[65%_35%] gap-8 items-center mt-8">
-<div class="space-y-4">
-
-- <strong class="text-blue-800">Advanced Authoring</strong>:
-    - **Visual Studio**: Intuitive drag-and-drop scenario creation.
-    - **AI Assistant**: LLMs converting natural language specs into executable BP models.
-
-- <strong class="text-blue-800">Scale & Depth</strong>:
-    - **Cloud SaaS**: High-throughput, fully managed event exploration.
-    - **Deep Verification**: Stronger model-checking integration for mathematical certainty.
-- <strong class="text-blue-800">Ecosystem</strong>: Domain-specific test libraries for rapid adoption in Fintech, Healthcare, and IoT.
-
-</div>
-<div class="flex items-center justify-center">
-  <img src="/slides_images/future_vision_engineering_interface.png" class="h-90 w-auto rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
-</div>
-</div>
-
----
-
 # Combinatorial Sequence Coverage
 
 <div class="text-sm">
@@ -804,5 +762,45 @@ Achiya Elyasaf, Eitan Farchi, Oded Margalit, Gera Weiss, Yeshayahu Weiss, <br> I
 </div>
 </div>
 
+---
 
+# Harsh Reality 
 
+<div class="grid grid-cols-[55%_45%] gap-8 items-center mt-8">
+<div class="space-y-4">
+
+- <strong class="text-blue-800">Deep Tech Environment</strong>: Navigating a challenging fundraising landscape requires proving deep technical value over hype.
+
+- <strong class="text-blue-800">Lean Engineering</strong>: We are a lean startup, building a robust core with a focused team.
+
+- <strong class="text-blue-800">Customer-Centric Growth</strong>:
+    - **Pilots**: Demonstrating immediate ROI in real-world environments.
+    - **Value**: Shifting from "potential" to "proven impact".
+
+</div>
+<div class="flex items-center justify-center">
+<img src="/slides_images/coding_under_fire.jpg" class="h-80 w-auto rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
+</div>
+</div>
+
+---
+
+# Future Vision
+
+<div class="grid grid-cols-[65%_35%] gap-8 items-center mt-8">
+<div class="space-y-4">
+
+- <strong class="text-blue-800">Advanced Authoring</strong>:
+    - **Visual Studio**: Intuitive drag-and-drop scenario creation.
+    - **AI Assistant**: LLMs converting natural language specs into executable BP models.
+
+- <strong class="text-blue-800">Scale & Depth</strong>:
+    - **Cloud SaaS**: High-throughput, fully managed event exploration.
+    - **Deep Verification**: Stronger model-checking integration for mathematical certainty.
+- <strong class="text-blue-800">Ecosystem</strong>: Domain-specific test libraries for rapid adoption in Fintech, Healthcare, and IoT.
+
+</div>
+<div class="flex items-center justify-center">
+  <img src="/slides_images/future_vision_engineering_interface.png" class="h-90 w-auto rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
+</div>
+</div>

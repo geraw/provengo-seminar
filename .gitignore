@@ -6,3 +6,4 @@ dist
 pdf2png
 package-lock.json
 pnpm-lock.yaml
+.gemini
