@@ -755,7 +755,7 @@ layout: default
 
 </div>
 <div class="flex items-center justify-center">
-  <img src="/slides_images/future_vision_interface.png" class="h-90 w-auto rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
+  <img src="/slides_images/future_vision_engineering_interface.png" class="h-90 w-auto rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
 </div>
 </div>
 
