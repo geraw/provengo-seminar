@@ -256,9 +256,9 @@ bthread("No two COLD in a row", function() {
     <Youtube id="spmH5sjIwN8" :width="560" :height="315" autoplay />
   </div>
 
-  <img src="/iai_logo_new.png" class="absolute -top-10 right-10 h-16 object-contain" alt="IAI Logo" />
+  <img src="/iai_logo_new.png" class="absolute -top-20 right-10 h-16 object-contain" alt="IAI Logo" />
   
-  <div class="absolute bottom-8 right-0 flex items-center gap-3 bg-white/90 p-2 rounded-lg shadow-sm border border-gray-100">
+  <div class="absolute bottom-15 right-0 flex items-center gap-3 bg-white/90 p-2 rounded-lg shadow-sm border border-gray-100">
     <img src="/aviran_sadon_nobg.png" class="w-12 h-12 rounded-full border border-gray-200 object-cover" />
     <div class="text-xs text-left leading-tight">
       <div class="font-bold">Aviran Sadon</div>
@@ -786,17 +786,6 @@ Achiya Elyasaf, Eitan Farchi, Oded Margalit, Gera Weiss, Yeshayahu Weiss, <br> I
   - A mathematically grounded method to generate minimized, high-coverage test suites from BP models.
 
 </div>
----
-
-
-# Bug amplification
-
-
----
-
-
-
-# Conclusion: Research ↔ Industry Reflections
 
 <div class="grid grid-cols-[55%_45%] gap-8 items-center mt-8">
 <div class="space-y-4">
