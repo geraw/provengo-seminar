@@ -13,9 +13,9 @@ Ben-Gurion University of the Negev
 
 ---
 
-# Why We Founded Provengo
+# Why We Founded Provengo?
 
-<div class="grid grid-cols-[60%_40%] gap-4">
+<div class="grid grid-cols-[65%_35%] gap-4">
 <div>
 
 
@@ -424,7 +424,7 @@ layout: default
 <img src="/provengo_logo_transparent.png" class="absolute top-6 right-6 w-24 z-50" />
 
 # The Blueprint is Brittle
-## Why Traditional BDD is Reaching Its Limits
+## Why Traditional BDD is Reaching Its Limits?
 
 <div class="grid grid-cols-[55%_45%] gap-8 items-center mt-8">
 <div class="space-y-4">
