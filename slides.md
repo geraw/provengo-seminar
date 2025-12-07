@@ -714,6 +714,59 @@ provengo run --test-suite suite-1
 </div>
 </div>
 
+
+---
+
+# Generalized Coverage Criteria for <br> Combinatorial Sequence Testing
+
+<div class="text-sm">
+
+<div class="text-gray-500 mb-4">
+Achiya Elyasaf, Eitan Farchi, Oded Margalit, Gera Weiss, Yeshayahu Weiss, <br> IEEE Transactions on Software Engineering (2023)
+</div>
+
+<img src="/combinatorial_testing_illustration.png" class="absolute top-10 right-10 w-60 rounded-lg shadow-lg border border-gray-200 z-10" />
+
+- <span class="text-red-600 font-bold">The Challenge</span><br>
+  - How to effectively verify systems with infinite state spaces and complex sequences? <br> <br>
+- <span class="text-blue-600 font-bold">Generalized Coverage</span>
+  - Extending combinatorial interaction testing (CIT) to **event sequences**.
+  - Allows testers to define *projection functions* that capture domain-specific "interesting" behaviors. <br> <br>
+- <span class="text-purple-600 font-bold">Statistical Approach</span> 
+  - **Bayesian Risk Assessment**: Quantifies the probability of remaining bugs based on observed successful executions.
+  - **Exploration vs. Exploitation**: Balances covering new behavioral patterns vs. deepening coverage of known risky areas. <br> <br>
+- <span class="text-green-600 font-bold">Practical Outcome</span>
+  - A mathematically grounded method to generate minimized, high-coverage test suites from BP models.
+</div>
+
+---
+
+# Black-Box Bug Amplification <br> for Multithreaded Software
+
+<div class="text-sm">
+
+<div class="text-gray-500 mb-4">
+Yeshayahu Weiss, Gal Amram, Achiya Elyasaf, Eitan Farchi, Oded Margalit, Gera Weiss, <br> Mathematics (2025)
+</div>
+
+<img src="/bug_amplification_16_10.png" class="absolute top-4 right-10 w-50 rounded-lg shadow-lg border border-gray-200 z-10 object-cover" />
+
+- <span class="text-red-600 font-bold">The Problem</span>
+  - **Heisenbugs**: Concurrency bugs that are rare, non-deterministic, and often vanish when instrumented.
+  - Traditional testing (random/stress) is inefficient at finding these low-probability events.
+
+- <span class="text-blue-600 font-bold">Black-Box Learning</span>
+  - Treating the system and scheduler as valid black boxes.
+  - Training **predictive models** on execution traces to estimate failure probabilities.
+
+- <span class="text-green-600 font-bold">Amplification Loop</span>
+  - **Feedback-Directed Search**: Using the model to guide the test generation towards input regions with higher suspected bug density.
+  - **Order-of-Magnitude Improvement**: Demonstrated 10x+ increase in bug manifestation rates compared to random baselines.
+
+</div>
+
+
+
 ---
 layout: default
 ---
@@ -787,55 +840,6 @@ layout: default
 </div>
 </div>
 
----
-
-# Generalized Coverage Criteria for <br> Combinatorial Sequence Testing
-
-<div class="text-sm">
-
-<div class="text-gray-500 mb-4">
-Achiya Elyasaf, Eitan Farchi, Oded Margalit, Gera Weiss, Yeshayahu Weiss, <br> IEEE Transactions on Software Engineering (2023)
-</div>
-
-<img src="/combinatorial_testing_illustration.png" class="absolute top-10 right-10 w-60 rounded-lg shadow-lg border border-gray-200 z-10" />
-
-- <span class="text-red-600 font-bold">The Challenge</span><br>
-  - How to effectively verify systems with infinite state spaces and complex sequences? <br> <br>
-- <span class="text-blue-600 font-bold">Generalized Coverage</span>
-  - Extending combinatorial interaction testing (CIT) to **event sequences**.
-  - Allows testers to define *projection functions* that capture domain-specific "interesting" behaviors. <br> <br>
-- <span class="text-purple-600 font-bold">Statistical Approach</span> 
-  - **Bayesian Risk Assessment**: Quantifies the probability of remaining bugs based on observed successful executions.
-  - **Exploration vs. Exploitation**: Balances covering new behavioral patterns vs. deepening coverage of known risky areas. <br> <br>
-- <span class="text-green-600 font-bold">Practical Outcome</span>
-  - A mathematically grounded method to generate minimized, high-coverage test suites from BP models.
-</div>
-
----
-
-# Black-Box Bug Amplification <br> for Multithreaded Software
-
-<div class="text-sm">
-
-<div class="text-gray-500 mb-4">
-Yeshayahu Weiss, Gal Amram, Achiya Elyasaf, Eitan Farchi, Oded Margalit, Gera Weiss, <br> Mathematics (2025)
-</div>
-
-<img src="/bug_amplification_16_10.png" class="absolute top-4 right-10 w-50 rounded-lg shadow-lg border border-gray-200 z-10 object-cover" />
-
-- <span class="text-red-600 font-bold">The Problem</span>
-  - **Heisenbugs**: Concurrency bugs that are rare, non-deterministic, and often vanish when instrumented.
-  - Traditional testing (random/stress) is inefficient at finding these low-probability events.
-
-- <span class="text-blue-600 font-bold">Black-Box Learning</span>
-  - Treating the system and scheduler as valid black boxes.
-  - Training **predictive models** on execution traces to estimate failure probabilities.
-
-- <span class="text-green-600 font-bold">Amplification Loop</span>
-  - **Feedback-Directed Search**: Using the model to guide the test generation towards input regions with higher suspected bug density.
-  - **Order-of-Magnitude Improvement**: Demonstrated 10x+ increase in bug manifestation rates compared to random baselines.
-
-</div>
 
 ---
 
