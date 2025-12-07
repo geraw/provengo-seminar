@@ -718,22 +718,45 @@ layout: default
 
 # Financial Reality
 
-- Challenging deep-tech fundraising environment  
-- Lean engineering  
-- Focus on customer pilots and demonstrating value
+<div class="grid grid-cols-[55%_45%] gap-8 items-center mt-8">
+<div class="space-y-4">
+
+- <strong class="text-blue-800">Deep Tech Environment</strong>: Navigating a challenging fundraising landscape requires proving deep technical value over hype.
+- <strong class="text-blue-800">Lean Engineering</strong>: We prioritize talent density and efficiency, building a robust core with a focused team.
+- <strong class="text-blue-800">Customer-Centric Growth</strong>:
+    - **Pilots**: Demonstrating immediate ROI in real-world environments.
+    - **Value**: Shifting from "potential" to "proven impact".
+
+</div>
+<div class="flex items-center justify-center">
+  <img src="/slides_images/lean_startup_rocket.png" class="h-80 w-auto rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
+</div>
+</div>
 
 ---
 
 <img src="/provengo_logo_transparent.png" class="absolute top-6 right-6 w-24 z-50" />
 
+<img src="/provengo_logo_transparent.png" class="absolute top-6 right-6 w-24 z-50" />
+
 # Future Vision
 
-- Powerful UI for scenario creation  
-- AI-assisted authoring (LLMs → BP models)  
-- High-throughput event exploration  
-- Stronger model-checking integration  
-- Domain-specific test libraries  
-- Fully managed SaaS
+<div class="grid grid-cols-[55%_45%] gap-8 items-center mt-8">
+<div class="space-y-4">
+
+- <strong class="text-blue-800">Advanced Authoring</strong>:
+    - **Visual Studio**: Intuitive drag-and-drop scenario creation.
+    - **AI Assistant**: LLMs converting natural language specs into executable BP models.
+- <strong class="text-blue-800">Scale & Depth</strong>:
+    - **Cloud SaaS**: High-throughput, fully managed event exploration.
+    - **Deep Verification**: Stronger model-checking integration for mathematical certainty.
+- <strong class="text-blue-800">Ecosystem</strong>: Domain-specific test libraries for rapid adoption in Fintech, Healthcare, and IoT.
+
+</div>
+<div class="flex items-center justify-center">
+  <img src="/slides_images/future_vision_interface.png" class="h-80 w-auto rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
+</div>
+</div>
 
 ---
 
@@ -741,9 +764,20 @@ layout: default
 
 # Research ↔ Industry Reflections
 
-- Industry exposes new research questions  
-- Research provides principled foundations  
-- Collaboration strengthens both sides
+<div class="grid grid-cols-[55%_45%] gap-8 items-center mt-8">
+<div class="space-y-4">
+
+- <strong class="text-blue-800">The Feedback Loop</strong>:
+    - **From Industry**: Real-world scale exposes gaps in current theory and provides "hard problems" worth solving.
+    - **From Research**: Principled, mathematically sound foundations prevent ad-hoc, brittle solutions.
+- <strong class="text-blue-800">Symbiosis</strong>: This continuous cycle drives innovation that is both rigorous and practically applicable.
+- <strong class="text-blue-800">Impact</strong>: Transforming abstract formal methods into concrete developer tools.
+
+</div>
+<div class="flex items-center justify-center">
+  <img src="/slides_images/research_industry_bridge.png" class="h-80 w-auto rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
+</div>
+</div>
 
 
 
