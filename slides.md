@@ -559,25 +559,25 @@ layout: default
 
 <img src="/provengo_logo_transparent.png" class="absolute top-6 right-6 w-24 z-50" />
 
-# A Complete, Local-First Workflow
+# Robust & Secure Toolchain
 
-<div class="grid grid-cols-[65%_35%] gap-8 items-center mt-8">
-<div class="space-y-2">
+<div class="grid grid-cols-[55%_45%] gap-8 items-center mt-8">
+<div class="space-y-4">
 
-- <strong class="text-blue-800">Local Execution</strong>: Runs entirely on your machine or CI runner. No dependency on 3rd party servers.
+- <strong class="text-blue-800">Local Execution</strong>: The engine runs 100% on your local machine or CI server. No dependency on 3rd party servers.
 
-- <strong class="text-blue-800">Secure</strong>: Your data, models, and tests never leave your infrastructure.
+- <strong class="text-blue-800">Zero Data Transfer</strong>: Your sensitive models, test data, and reports never leave your network. No cloud upload.
 
-- <strong class="text-blue-800">The Workflow</strong>:
-    1.  **Write**: Define the model using standard JavaScript.
-    2.  **Analyze**: Visualize the state space to feel and verify the logic.
-    3.  **Sample**: Generate test suites.
-    4.  **Run**: Execute against the system (Selenium, API, etc.).
-    5.  **Report**: Get detailed execution logs and recordings.
+- <strong class="text-blue-800">Integrations</strong>:
+    - **Selenium Manager**: Automatic management and synchronization of web drivers.
+
+    - **IDE Support**: Best-in-class VSCode extension for modeling and debugging.
+
+- <strong class="text-blue-800">Cross-Platform</strong>: Full support for Linux, Mac, and Windows environments.
 
 </div>
 <div class="flex items-center justify-center">
-  <img src="/slides_images/local_first.png" class="h-80 w-auto rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
+  <img src="/slides_images/secure_toolchain.png" class="h-100 w-auto rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
 </div>
 </div>
 
@@ -644,33 +644,6 @@ layout: default
 </div>
 </div>
 
----
-layout: default
----
-
-<img src="/provengo_logo_transparent.png" class="absolute top-6 right-6 w-24 z-50" />
-
-# Robust & Secure Toolchain
-
-<div class="grid grid-cols-[55%_45%] gap-8 items-center mt-8">
-<div class="space-y-4">
-
-- <strong class="text-blue-800">Local Execution</strong>: The engine runs 100% on your local machine or CI server. No dependency on 3rd party servers.
-
-- <strong class="text-blue-800">Zero Data Transfer</strong>: Your sensitive models, test data, and reports never leave your network. No cloud upload.
-
-- <strong class="text-blue-800">Integrations</strong>:
-    - **Selenium Manager**: Automatic management and synchronization of web drivers.
-
-    - **IDE Support**: Best-in-class VSCode extension for modeling and debugging.
-
-- <strong class="text-blue-800">Cross-Platform</strong>: Full support for Linux, Mac, and Windows environments.
-
-</div>
-<div class="flex items-center justify-center">
-  <img src="/slides_images/secure_toolchain.png" class="h-100 w-auto rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
-</div>
-</div>
 
 ---
 layout: default
@@ -775,20 +748,16 @@ Achiya Elyasaf, Eitan Farchi, Oded Margalit, Gera Weiss, Yeshayahu Weiss, <br> I
 
 <img src="/combinatorial_testing_illustration.png" class="absolute top-10 right-10 w-60 rounded-lg shadow-lg border border-gray-200 z-10" />
 
-- <span class="text-red-600 font-bold">The Challenge</span>
-  - How to effectively verify systems with infinite state spaces and complex sequences?
-
+- <span class="text-red-600 font-bold">The Challenge</span><br>
+  - How to effectively verify systems with infinite state spaces and complex sequences? <br> <br>
 - <span class="text-blue-600 font-bold">Generalized Coverage</span>
   - Extending combinatorial interaction testing (CIT) to **event sequences**.
-  - Allows testers to define *projection functions* that capture domain-specific "interesting" behaviors.
-
-- <span class="text-purple-600 font-bold">Statistical Approach</span>
+  - Allows testers to define *projection functions* that capture domain-specific "interesting" behaviors. <br> <br>
+- <span class="text-purple-600 font-bold">Statistical Approach</span> 
   - **Bayesian Risk Assessment**: Quantifies the probability of remaining bugs based on observed successful executions.
-  - **Exploration vs. Exploitation**: Balances covering new behavioral patterns vs. deepening coverage of known risky areas.
-
+  - **Exploration vs. Exploitation**: Balances covering new behavioral patterns vs. deepening coverage of known risky areas. <br> <br>
 - <span class="text-green-600 font-bold">Practical Outcome</span>
   - A mathematically grounded method to generate minimized, high-coverage test suites from BP models.
-
 </div>
 
 ---
