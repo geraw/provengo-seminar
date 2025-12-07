@@ -508,17 +508,6 @@ vehicleType.whenSetTo("sports car")
 
 // A truck can't have 6 seats
 vehicleType.whenSetTo("truck")
-    .field(seatCount).cannotBe(6);
-```
-
-</div>
-<div class="flex items-center justify-center">
-  <img src="/slides_images/untangling_rules.png" class="h-80 w-auto rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
-</div>
-</div>
-
----
-layout: default
 ---
 
 <img src="/provengo_logo_transparent.png" class="absolute top-6 right-6 w-24 z-50" />
@@ -722,7 +711,7 @@ layout: default
 
 </div>
 <div class="flex items-center justify-center">
-  <img src="/slides_images/lean_startup_rocket.png" class="h-80 w-auto rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
+<img src="/slides_images/coding_under_fire.jpg" class="h-80 w-auto rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
 </div>
 </div>
 
@@ -732,12 +721,13 @@ layout: default
 
 # Future Vision
 
-<div class="grid grid-cols-[55%_45%] gap-8 items-center mt-8">
+<div class="grid grid-cols-[65%_35%] gap-8 items-center mt-8">
 <div class="space-y-4">
 
 - <strong class="text-blue-800">Advanced Authoring</strong>:
     - **Visual Studio**: Intuitive drag-and-drop scenario creation.
     - **AI Assistant**: LLMs converting natural language specs into executable BP models.
+
 - <strong class="text-blue-800">Scale & Depth</strong>:
     - **Cloud SaaS**: High-throughput, fully managed event exploration.
     - **Deep Verification**: Stronger model-checking integration for mathematical certainty.
@@ -745,7 +735,7 @@ layout: default
 
 </div>
 <div class="flex items-center justify-center">
-  <img src="/slides_images/future_vision_interface.png" class="h-80 w-auto rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
+  <img src="/slides_images/future_vision_interface.png" class="h-90 w-auto rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
 </div>
 </div>
 
@@ -755,48 +745,22 @@ layout: default
 
 # Research ↔ Industry Reflections
 
-<div class="grid grid-cols-[55%_45%] gap-8 items-center mt-8">
+<div class="grid grid-cols-[55%45%] gap-8 items-center mt-8">
 <div class="space-y-4">
 
 - <strong class="text-blue-800">The Feedback Loop</strong>:
     - **From Industry**: Real-world scale exposes gaps in current theory and provides "hard problems" worth solving.
+
     - **From Research**: Principled, mathematically sound foundations prevent ad-hoc, brittle solutions.
+
 - <strong class="text-blue-800">Symbiosis</strong>: This continuous cycle drives innovation that is both rigorous and practically applicable.
 - <strong class="text-blue-800">Impact</strong>: Transforming abstract formal methods into concrete developer tools.
 
-</div>
+</div> 
 <div class="flex items-center justify-center">
   <img src="/slides_images/research_industry_bridge.png" class="h-80 w-auto rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
 </div>
 </div>
 
 
-
-
----
-
-<img src="/provengo_logo_transparent.png" class="absolute top-6 right-6 w-24 z-50" />
-
-# Thank You
-## Q & A
-
-<div class="grid grid-cols-[55%_45%] gap-8 items-center mt-8">
-<div class="space-y-4">
-
-- <strong class="text-blue-800">We appreciate your time!</strong>
-- <strong class="text-blue-800">Next Steps</strong>:
-    - Visit **provengo.ai** for docs and downloads.
-    - Check out the **VSCode Extension**.
-    - Star us on **GitHub**: `bthink-bgu/bpjs`.
-
-### Keep in Touch
-- **Email**: `uchi@provengo.ai` / `gera@provengo.ai`
-- **LinkedIn**: Provengo
-- **Twitter**: @ProvengoAI
-
-</div>
-<div class="flex items-center justify-center">
-  <img src="/slides_images/thank_you_curtain_call.png" class="h-80 w-auto rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
-</div>
-</div>
 
