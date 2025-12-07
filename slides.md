@@ -364,11 +364,28 @@ bthread("No two COLD in a row", function() {
 
 # Provengo Platform Today
 
-- Story-based testing language  
-- Multi-session Selenium + REST orchestration  
-- Automatic generation of meaningful tests  
-- CI/CD integrations  
-- Cloud test runner
+<div class="grid grid-cols-[55%_45%] gap-4 items-center">
+<div>
+
+### The Provengo CLI
+A layered architecture for model-based testing:
+
+- **Analysis Tools & Engines** (Top)
+  - Verification, Sampling, Coverage Analysis
+  - Automated test suite creation
+- **Libraries \ DSLs**
+  - Domain Specific Languages for testing
+  - Integrations for Actuators/Sensors (e.g., Selenium)
+- **BP Core** (Foundation)
+  - Behavioral Programming execution engine
+  - State management and event orchestration
+
+</div>
+
+<div class="flex flex-col items-center justify-center">
+  <img src="/provengo_cli_architecture_lego.png" class="h-90 w-auto rounded-lg shadow-xl border-2 border-gray-100 object-cover" alt="Provengo CLI Architecture" />
+</div>
+</div>
 
 ---
 
