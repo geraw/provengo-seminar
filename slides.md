@@ -387,7 +387,219 @@ A layered architecture for model-based testing:
 </div>
 </div>
 
+
 ---
+
+# Living Requirements
+## What if your requirements document wasn't a dead artifact?
+
+<div class="grid grid-cols-[55%_45%] gap-8 items-center mt-8">
+<div class="space-y-4">
+
+- <strong class="text-blue-800">Current State</strong>: Traditional specifications, requirements, and test plans are treated as static, 'dead' documents.
+- <strong class="text-blue-800">The Problem</strong>: They are authored and reviewed once, but immediately begin to drift from the  implementation.
+
+- <strong class="text-blue-800">The Result</strong>: This synchronization gap breeds hidden complexity, ambiguity in interpretation, and costly bugs discovered late.
+- <strong class="text-blue-800">The Solution</strong>: Shift to a <strong class="text-blue-800">Living, Testable Asset</strong>, a model that evolves alongside the code.
+
+</div>
+<div class="flex items-center justify-center">
+  <img src="/slides_images/living_vs_dead.png" class="h-80 w-auto rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
+</div>
+</div>
+
+---
+layout: default
+---
+
+<div class="grid grid-cols-[60%_40%] gap-4 items-center">
+<div>
+
+# The Blueprint is Brittle
+## Why Traditional BDD is Reaching Its Limits
+
+- **The Promise**: BDD aimed to bridge the business-technical divide.
+- **The Reality**:
+    - Maintenance nightmare of fragile test suites.
+    - Disconnect between Gherkin feature files and underlying logic.
+    - "Easy to write markup" often creates more work than it saves.
+
+</div>
+<div class="flex items-center justify-center">
+  <img src="/slides_images/brittle_bdd.png" class="h-60 rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
+</div>
+</div>
+
+---
+layout: default
+---
+
+<div class="grid grid-cols-[60%_40%] gap-4 items-center">
+<div>
+
+# The Future is a Living Model
+## A Single Source of Truth
+
+- **Executable Model**: Not a document, but a dynamic representation.
+- **Capabilities**: Query, visualize, and generate tests from one source.
+- **Bridge**: Connects Business (Analyst), Development, and QA.
+- **Goal**: Everyone builds and tests the same system.
+
+</div>
+<div class="flex items-center justify-center">
+  <img src="/slides_images/single_source_of_truth.png" class="h-60 rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
+</div>
+</div>
+
+---
+layout: default
+---
+
+# Provengo: Scenario-Driven Model-Based Testing
+
+- **Active Requirements**: Makes system requirements executable.
+- **Living Models**: Codify user stories and business logic.
+- **SDMBT**: Scenario-Driven Model-Based Testing.
+    - Start with simple models.
+    - Incrementally augment with more rules.
+
+---
+layout: default
+---
+
+# Encode Complex Business Rules
+## Transform Ambiguity into Executable Logic
+
+- **Combi Library**: Define parameters and inter-dependencies directly in the model.
+- **Eliminate Misinterpretation**:
+    ```javascript
+    // A sports car must have exactly two seats
+    vehicleType.whenSetTo("sports car")
+        .field(seatCount).mustBe(2);
+
+    // A truck can't have 6 seats
+    vehicleType.whenSetTo("truck")
+        .field(seatCount).cannotBe(6);
+    ```
+- **Visualisation**: Automatically visualize the test space from your model.
+
+---
+layout: default
+---
+
+# From Abstract Model to Concrete Automation
+
+- **Drivers**: The model defines "what" and "why"; libraries execute the "how".
+- **Rich Libraries**:
+    - **UI Automation**: Selenium integration.
+    - **API Testing**: REST integration.
+- **Code Example**:
+    ```javascript
+    // @provengo summon selenium
+    const session = new SeleniumSession("main");
+    session.start("https://your.app.com");
+    session.click("//a[contains(text(), 'Sign In')]");
+    ```
+
+---
+layout: default
+---
+
+<div class="grid grid-cols-[60%_40%] gap-4 items-center">
+<div>
+
+# A Complete, Local-First Workflow
+
+- **Local Execution**: Command-line tool, runs on your machine.
+- **Secure**: No data transferred to servers.
+- **Workflow**:
+    1.  **Write**: Model in JavaScript.
+    2.  **Analyze**: Visualize state space, verify logic.
+    3.  **Sample**: Generate random or full test scenarios.
+    4.  **Run**: Execute scenarios against the system.
+    5.  **Report**: Review detailed execution reports.
+
+</div>
+<div class="flex items-center justify-center">
+  <img src="/slides_images/local_first.png" class="h-60 rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
+</div>
+</div>
+
+---
+layout: default
+---
+
+# Case Study: Insurance Claims Processing
+
+| Challenge | Solution | Impact |
+| --- | --- | --- |
+| Manual claims processing, complex rules, strict regulations. | **Map & Automate**: Modeled every aspect of the process. | **0-25%** Cost reduction.<br>**Shorter** project timelines. |
+|  | **Policy Definition**: Regulatory compliance became straightforward. | **Simplified** compliance. |
+
+---
+layout: default
+---
+
+# Case Study: Major Bank SSO
+
+| Challenge | Solution | Impact |
+| --- | --- | --- |
+| Replace SSO system, reduce friction, ensure data safety. | **Complete Model**: Modeling desired SSO capabilities. | **50%** Reduction in STD timeline. |
+| Regulatory alignment. | **Integration**: Ensured seamless integration and compliance. | **>30%** Validated pre-implementation. |
+
+---
+layout: default
+---
+
+<div class="grid grid-cols-[60%_40%] gap-4 items-center">
+<div>
+
+# The Bigger Picture
+## From Complexity to Clarity and Cost Savings
+
+- **Transform Enterprise Development**: Simplify the complex.
+- **Benefits**:
+    - Ensure regulatory compliance.
+    - Improve collaboration.
+- **Results**:
+    - **15-25%** Total Cost Savings.
+    - **Up to 50%** Faster Timelines.
+    - **>30%** Requirements Validated Pre-Code.
+
+</div>
+<div class="flex items-center justify-center">
+  <img src="/slides_images/roi_impact.png" class="h-60 rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
+</div>
+</div>
+
+---
+layout: default
+---
+
+# Robust & Secure Toolchain
+
+- **Local Execution**: Runs on local machine/CI. No internet required.
+- **Zero Data Transfer**: No models/code sent to cloud.
+- **Integrations**:
+    - **Selenium Manager**: Auto web driver sync.
+    - **IDE Support**: VSCode Plugin (Provengo Studio).
+- **Platform**: Linux, Mac, Windows.
+
+---
+layout: default
+---
+
+# Ready to Simplify the Complex?
+
+- **Transform**: Intricate processes -> Streamlined systems.
+- **Support**: Installation, training, process optimisation.
+
+### Contact Us
+- **Email**: `hello@provengo.ai`
+- **HQ**: Tel Aviv, Israel / Boston, USA
+
+---
+
 
 # Success Stories
 
@@ -421,6 +633,9 @@ A layered architecture for model-based testing:
 - Industry exposes new research questions  
 - Research provides principled foundations  
 - Collaboration strengthens both sides
+
+
+
 
 ---
 
