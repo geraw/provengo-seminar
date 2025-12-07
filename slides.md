@@ -57,7 +57,7 @@ Ben-Gurion University of the Negev
 - **2022–present** — Customer successes + platform development
 - **2022–present** — Research expansion in collaboration with Provengo
 
-<img src="/timeline_comic.png" class="absolute bottom-10 right-10 w-70" alt="Timeline Comic" />
+<img src="/timeline_comic_david.png" class="absolute bottom-10 right-10 w-70" alt="Timeline Comic" />
 
 
 
