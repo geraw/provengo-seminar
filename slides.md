@@ -274,30 +274,33 @@ bthread("No two COLD in a row", function() {
 
 # A patent for using BP for testing satellites (2021)
 
-
-<div class="grid grid-cols-[60%_40%] gap-4">
+<div class="grid grid-cols-[70%_30%] gap-4">
 <div>
 
+- **Patent**: "Scenario based method for testing software"
+- **US Patent No.**: 11,138,100 (Issued Oct 5, 2021)
+- **Inventors**: Gera Weiss, Aviran Sadon, Achiya Elyasaf, Michael Bar-Sinai
 
+<br>
 
-<!-- - **Tests are Stories**  
-  BP scenarios directly map to requirements and user stories
+<div class="text-12pt">
 
-- **Taming Complexity**  
-  Naturally handles complex interleavings and race conditions where bugs hide
-  
-- **Shift Left**  
-  Catches design flaws early by executing the specification itself
+### The Core Innovation
+- **Modeling**:  
+  Test logic is defined as independent behavioral threads (b-threads).
 
-- **Separation of Concerns**  
-  Decouples test logic ("what to test") from technical implementation ("how to drive the UI")
+- **Interleaving**: <br>
+  The BP execution engine naturally interleaves these threads at runtime.
+- **Emergence**: <br>
+  Complex test scenarios emerge from the interaction of simple rules.
+- **Simulation**: <br>
+  Includes simulation of environment and subsystems 
 
-- **Smart Automation**  
-  Combines human insight with automated exploration to generate meaningful test coverage -->
+</div>
 
 </div>
 <div class="flex items-center justify-center">
-  <img src="/provengo_workflow_comic.png" class="max-h-80 w-auto rounded-lg shadow-lg border border-gray-200" alt="Provengo Workflow" />
+  <img src="/provengo_workflow_comic.png" class="h-100 w-100 rounded-lg" alt="Provengo Workflow" />
 </div>
 </div>
 
@@ -761,7 +764,7 @@ layout: default
 
 ---
 
-# Combinatorial Sequence Coverage
+# Generalized Coverage Criteria for <br> Combinatorial Sequence Testing
 
 <div class="text-sm">
 
@@ -786,6 +789,36 @@ Achiya Elyasaf, Eitan Farchi, Oded Margalit, Gera Weiss, Yeshayahu Weiss, <br> I
   - A mathematically grounded method to generate minimized, high-coverage test suites from BP models.
 
 </div>
+
+---
+
+# Black-Box Bug Amplification <br> for Multithreaded Software
+
+<div class="text-sm">
+
+<div class="text-gray-500 mb-4">
+Yeshayahu Weiss, Gal Amram, Achiya Elyasaf, Eitan Farchi, Oded Margalit, Gera Weiss, <br> Mathematics (2025)
+</div>
+
+<img src="/bug_amplification_16_10.png" class="absolute top-4 right-10 w-50 rounded-lg shadow-lg border border-gray-200 z-10 object-cover" />
+
+- <span class="text-red-600 font-bold">The Problem</span>
+  - **Heisenbugs**: Concurrency bugs that are rare, non-deterministic, and often vanish when instrumented.
+  - Traditional testing (random/stress) is inefficient at finding these low-probability events.
+
+- <span class="text-blue-600 font-bold">Black-Box Learning</span>
+  - Treating the system and scheduler as valid black boxes.
+  - Training **predictive models** on execution traces to estimate failure probabilities.
+
+- <span class="text-green-600 font-bold">Amplification Loop</span>
+  - **Feedback-Directed Search**: Using the model to guide the test generation towards input regions with higher suspected bug density.
+  - **Order-of-Magnitude Improvement**: Empirically demonstrated 10x+ increase in bug manifestation rates compared to random baselines.
+
+</div>
+
+---
+
+# Conclusion: Research ↔ Industry Reflections
 
 <div class="grid grid-cols-[55%_45%] gap-8 items-center mt-8">
 <div class="space-y-4">
