@@ -338,25 +338,25 @@ bthread("No two COLD in a row", function() {
 
 # BGN Agreement
 
-<div class="grid grid-cols-[40%_60%] gap-4 items-center">
-<div class="text-sm">
+<div class="grid grid-cols-[50%_50%] gap-4 items-center">
+<div class="text-[15px]">
 
 - **Parallel Progress**
-  - Scientific research continues alongside product development
-  - Facilitated via a dedicated **Research Project** (similar to IAI collaboration)
+  - Scientific research alongside product development
+  - Facilitated via a dedicated **Research Project** <br> (similar to IAI collaboration)
 
 - **Symbiotic Exchange**
   - **University → Company**: Scientific knowledge & innovation
-  - **Company → University**: Real-world products & data for research
+  - **Company → University**: products & data for research
 
 - **Strategic Partnership**
-  - BGN University remains a key **Shareholder**
+  - BGU is a **Shareholder**
   - BPjs core remains open source
 
 </div>
 
 <div class="flex flex-col items-center justify-center">
-  <img src="/bgn_provengo_lego.png" class="h-80 w-auto rounded-lg shadow-xl border-2 border-gray-100 object-cover" alt="BGN-Provengo Symbiosis" />
+  <img src="/bgn_provengo_lego_v2.png" class="h-90 w-auto rounded-lg shadow-xl border-2 border-gray-100 object-cover" alt="BGN-Provengo Symbiosis" />
 </div>
 </div>
 
