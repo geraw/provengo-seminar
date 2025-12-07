@@ -1,6 +1,7 @@
 ---
 theme: default
 title: "From Behavioral Programming Research to Provengo"
+colorSchema: "light"
 ---
 
 # From Research to Startup  
@@ -253,7 +254,7 @@ bthread("No two COLD in a row", function() {
 
 <div class="relative h-full w-full">
   <div class="absolute inset-0 flex items-start justify-center pt-4">
-    <Youtube id="spmH5sjIwN8" :width="560" :height="315" autoplay />
+    <Youtube id="spmH5sjIwN8" :width="560" :height="315" autoplay="true" />
   </div>
 
   <img src="/iai_logo_new.png" class="absolute -top-20 right-10 h-16 object-contain" alt="IAI Logo" />

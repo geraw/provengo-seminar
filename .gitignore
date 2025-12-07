@@ -4,3 +4,6 @@ dist
 .vscode
 .DS_Store
 pdf2png
+package-lock.json
+pnpm-lock.yaml
+.gemini
