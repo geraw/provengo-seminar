@@ -172,7 +172,7 @@ bthread("No two COLD in a row", function() {
 <div>
 
 - **Embedded Formal Model**
-  - Uses **Rhino** to run JavaScript within a Java application
+  - Uses Mozilla **Rhino** to run JavaScript within Java
   - The JavaScript code is a formal behavioral model
 
 - **Verification Tools**
@@ -248,12 +248,12 @@ bthread("No two COLD in a row", function() {
 - **Outcome**
   - IAI approved the project, but not ready for adoption
   - Led to patent on BPjs for testing
-  - Pivot to testing as a market entry point
+  - <span class="text-blue-600">**Pivot to testing as a market entry point**</span>
 </div>
 
 <div class="relative h-full w-full">
-  <div class="absolute inset-0 flex items-center justify-center">
-    <Youtube id="spmH5sjIwN8" :width="560" :height="315" />
+  <div class="absolute inset-0 flex items-start justify-center pt-4">
+    <Youtube id="spmH5sjIwN8" :width="560" :height="315" autoplay />
   </div>
 
   <img src="/iai_logo_new.png" class="absolute -top-10 right-10 h-16 object-contain" alt="IAI Logo" />
@@ -272,13 +272,15 @@ bthread("No two COLD in a row", function() {
 
 ---
 
-# Why BP Fits Testing
+# A patent for using BP for testing satellites (2021)
 
 
 <div class="grid grid-cols-[60%_40%] gap-4">
 <div>
 
-- **Tests are Stories**  
+
+
+<!-- - **Tests are Stories**  
   BP scenarios directly map to requirements and user stories
 
 - **Taming Complexity**  
@@ -291,7 +293,7 @@ bthread("No two COLD in a row", function() {
   Decouples test logic ("what to test") from technical implementation ("how to drive the UI")
 
 - **Smart Automation**  
-  Combines human insight with automated exploration to generate meaningful test coverage
+  Combines human insight with automated exploration to generate meaningful test coverage -->
 
 </div>
 <div class="flex items-center justify-center">
@@ -303,7 +305,7 @@ bthread("No two COLD in a row", function() {
 
 
 
-# Founding Provengo (2021)
+# Founding Provengo (2022)
 
 <div class="grid grid-cols-[60%_40%] gap-4">
 <div>
@@ -716,7 +718,7 @@ layout: default
 
 ---
 
-# Financial Reality 
+# Harsh Reality 
 
 <div class="grid grid-cols-[55%_45%] gap-8 items-center mt-8">
 <div class="space-y-4">
@@ -758,6 +760,40 @@ layout: default
 </div>
 
 ---
+
+# Combinatorial Sequence Coverage
+
+<div class="text-sm">
+
+<div class="text-gray-500 mb-4">
+Achiya Elyasaf, Eitan Farchi, Oded Margalit, Gera Weiss, Yeshayahu Weiss, <br> IEEE Transactions on Software Engineering (2023)
+</div>
+
+<img src="/combinatorial_testing_illustration.png" class="absolute top-10 right-10 w-60 rounded-lg shadow-lg border border-gray-200 z-10" />
+
+- <span class="text-red-600 font-bold">The Challenge</span>
+  - How to effectively verify systems with infinite state spaces and complex sequences?
+
+- <span class="text-blue-600 font-bold">Generalized Coverage</span>
+  - Extending combinatorial interaction testing (CIT) to **event sequences**.
+  - Allows testers to define *projection functions* that capture domain-specific "interesting" behaviors.
+
+- <span class="text-purple-600 font-bold">Statistical Approach</span>
+  - **Bayesian Risk Assessment**: Quantifies the probability of remaining bugs based on observed successful executions.
+  - **Exploration vs. Exploitation**: Balances covering new behavioral patterns vs. deepening coverage of known risky areas.
+
+- <span class="text-green-600 font-bold">Practical Outcome</span>
+  - A mathematically grounded method to generate minimized, high-coverage test suites from BP models.
+
+</div>
+---
+
+
+# Bug amplification
+
+
+---
+
 
 
 # Conclusion: Research ↔ Industry Reflections
