@@ -623,6 +623,103 @@ layout: default
 
 <img src="/provengo_logo_transparent.png" class="absolute top-6 right-6 w-24 z-50" />
 
+# Case Study: Testing an Online Store
+## Modeling Low-Level Interactions Separate from High-Level Integration
+
+<div class="grid grid-cols-[55%_45%] gap-8 items-center mt-8">
+<div class="space-y-4">
+
+- <strong class="text-blue-800">The SUT</strong>: An online store (Magento).
+- <strong class="text-blue-800">The Approach</strong>:
+    - **Separation of Concerns**: We modeled the low-level interactions (Login, Add to Cart) separately from the high-level integration model.
+    - **Goal**: Verify end-to-end flows like "Buy a specific item".
+- <strong class="text-blue-800">The Bugs</strong>:
+    - Found critical logic bugs in Magento related to inventory management and checkout flows.
+
+</div>
+<div class="flex items-center justify-center">
+  <img src="/slides_images/magento_store_luma.png" class="h-80 w-auto rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
+</div>
+</div>
+
+---
+
+<img src="/provengo_logo_transparent.png" class="absolute top-6 right-6 w-24 z-50" />
+
+# Low-Level Interactions
+## Reusable Sub-Models
+
+<div class="grid grid-cols-2 gap-4 mt-8">
+<div class="flex flex-col items-center">
+    <h3 class="mb-2 font-bold text-blue-800">Login Model</h3>
+    <img src="/slides_images/online_store_login.png" class="w-full rounded-lg shadow-lg border-2 border-gray-100" />
+</div>
+<div class="flex flex-col items-center">
+    <h3 class="mb-2 font-bold text-blue-800">Add to Cart Model</h3>
+    <img src="/slides_images/online_store_add_to_cart.png" class="w-full rounded-lg shadow-lg border-2 border-gray-100" />
+</div>
+</div>
+
+---
+
+<img src="/provengo_logo_transparent.png" class="absolute top-6 right-6 w-24 z-50" />
+
+# High-Level Integration
+## Composing End-to-End Tests
+
+<div class="grid grid-cols-[40%_60%] gap-8 items-center mt-8">
+<div class="space-y-4">
+
+- <strong class="text-blue-800">Composition</strong>:
+    - We compose the low-level blocks (Open page, Login, Add to cart, Checkout) into high-level scenarios.
+- <strong class="text-blue-800">Verification</strong>:
+    - We can verify "Admin takes item out of stock" vs "User tries to buy item".
+    - Provengo explores the interleavings of these scenarios.
+    
+</div>
+<div class="flex items-center justify-center">
+  <img src="/slides_images/online_store_end_to_end.png" class="w-full rounded-lg shadow-xl border-2 border-gray-100" />
+</div>
+</div>
+
+---
+
+<img src="/provengo_logo_transparent.png" class="absolute top-6 right-6 w-24 z-50" />
+
+# Generating Test Suites
+## From Model to Coverage
+
+<div class="grid grid-cols-[50%_50%] gap-8 items-center mt-8">
+<div class="space-y-4">
+
+- <strong class="text-blue-800">Automatic Generation</strong>:
+    - We use Provengo to generate a test suite that satisfies specific coverage criteria.
+    - We can explicitly request scenarios that hit specific events or states.
+
+</div>
+<div class="flex flex-col items-start bg-gray-900 rounded-lg p-4 text-white font-mono text-sm overflow-x-auto w-full">
+<div class="text-gray-400 mb-2"># Generate tests covering "Out of Stock" events</div>
+
+```bash
+provengo analyze -f html \
+  --coverage-goal "event(OutOfStock)" \
+  --limit 100
+```
+
+<div class="text-gray-400 mt-4 mb-2"># Run the generated suite</div>
+
+```bash
+provengo run --test-suite suite-1
+```
+</div>
+</div>
+
+---
+layout: default
+---
+
+<img src="/provengo_logo_transparent.png" class="absolute top-6 right-6 w-24 z-50" />
+
 # The Bigger Picture
 ## From Complexity to Clarity and Cost Savings
 
@@ -645,53 +742,7 @@ layout: default
 </div>
 
 
----
-layout: default
----
 
-<img src="/provengo_logo_transparent.png" class="absolute top-6 right-6 w-24 z-50" />
-
-# Ready to Simplify the Complex?
-
-<div class="grid grid-cols-[55%_45%] gap-8 items-center mt-8">
-<div class="space-y-4">
-
-- <strong class="text-blue-800">Transform Your Process</strong>: Move from intricate, fragile manual testing to robust, streamlined model-based systems.
-- <strong class="text-blue-800">We Are Here to Help</strong>:
-    - **Installation**: Quick setup and onboarding.
-    - **Training**: Hands-on workshops for your team.
-    - **Optimization**: Tailored advice for your specific domain.
-
-### Contact Us
-- **Email**: `hello@provengo.ai`
-- **HQ**: Tel Aviv, Israel / Boston, USA
-
-</div>
-<div class="flex items-center justify-center">
-  <img src="/slides_images/simplify_complexity.png" class="h-90 w-auto rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
-</div>
-</div>
-
----
-
-# Success Stories
-
-<div class="grid grid-cols-[55%_45%] gap-8 items-center mt-8">
-<div class="space-y-4">
-
-- <strong class="text-blue-800">Taming Concurrency</strong>: We helped customers utilizing complex parallel workflows identify and fix race conditions that were previously impossible to reproduce.
-
-- <strong class="text-blue-800">Deep Bug Detection</strong>: Our model-based approach uncovered logic errors buried deep within state transitions, undetectable by standard linear scripts.
-- <strong class="text-blue-800">Efficiency Boost</strong>:
-    - **Coverage**: Explored edge cases automatically.
-
-    - **Effort**: Significantly reduced the burden of manual regression testing.
-
-</div>
-<div class="flex items-center justify-center">
-  <img src="/slides_images/success_stories_trophy.png" class="h-90 w-auto rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
-</div>
-</div>
 
 ---
 
@@ -782,7 +833,7 @@ Yeshayahu Weiss, Gal Amram, Achiya Elyasaf, Eitan Farchi, Oded Margalit, Gera We
 
 - <span class="text-green-600 font-bold">Amplification Loop</span>
   - **Feedback-Directed Search**: Using the model to guide the test generation towards input regions with higher suspected bug density.
-  - **Order-of-Magnitude Improvement**: Empirically demonstrated 10x+ increase in bug manifestation rates compared to random baselines.
+  - **Order-of-Magnitude Improvement**: Demonstrated 10x+ increase in bug manifestation rates compared to random baselines.
 
 </div>
 
