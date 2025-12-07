@@ -493,18 +493,28 @@ layout: default
 # Encode Complex Business Rules
 ## Transform Ambiguity into Executable Logic
 
-- **Combi Library**: Define parameters and inter-dependencies directly in the model.
-- **Eliminate Misinterpretation**:
-    ```javascript
-    // A sports car must have exactly two seats
-    vehicleType.whenSetTo("sports car")
-        .field(seatCount).mustBe(2);
+<div class="grid grid-cols-[55%_45%] gap-8 items-center mt-8">
+<div class="space-y-4">
 
-    // A truck can't have 6 seats
-    vehicleType.whenSetTo("truck")
-        .field(seatCount).cannotBe(6);
-    ```
-- **Visualisation**: Automatically visualize the test space from your model.
+- <strong class="text-blue-800">Combi Library</strong>: A powerful engine to define parameters, constraints, and their inter-dependencies directly within the model.
+- <strong class="text-blue-800">Eliminate Misinterpretation</strong>: Replace vague documents with strict code.
+- <strong class="text-blue-800">Visualisation</strong>: The model automatically generates the full state space, making gaps in logic visible immediately.
+
+```javascript
+// Example: A sports car must have exactly two seats
+vehicleType.whenSetTo("sports car")
+    .field(seatCount).mustBe(2);
+
+// A truck can't have 6 seats
+vehicleType.whenSetTo("truck")
+    .field(seatCount).cannotBe(6);
+```
+
+</div>
+<div class="flex items-center justify-center">
+  <img src="/slides_images/untangling_rules.png" class="h-80 w-auto rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
+</div>
+</div>
 
 ---
 layout: default
@@ -514,41 +524,55 @@ layout: default
 
 # From Abstract Model to Concrete Automation
 
-- **Drivers**: The model defines "what" and "why"; libraries execute the "how".
-- **Rich Libraries**:
-    - **UI Automation**: Selenium integration.
-    - **API Testing**: REST integration.
-- **Code Example**:
-    ```javascript
-    // @provengo summon selenium
-    const session = new SeleniumSession("main");
-    session.start("https://your.app.com");
-    session.click("//a[contains(text(), 'Sign In')]");
-    ```
+<div class="grid grid-cols-[55%_45%] gap-8 items-center mt-8">
+<div class="space-y-4">
+
+- <strong class="text-blue-800">Drivers</strong>: The model defines the "what" (business logic) and "why" (requirements). Drivers handle the "how" (execution).
+
+- <strong class="text-blue-800">Rich Ecosystem</strong>: 
+    - **UI Automation**: Seamless Selenium/Playwright integration.
+
+    - **API Testing**: Direct REST API calls.
+- <strong class="text-blue-800">Code Example</strong>:
+
+```javascript
+// @provengo summon selenium
+const session = new SeleniumSession("main");
+session.start("https://your.app.com");
+session.click("//a[contains(text(), 'Sign In')]");
+```
+
+</div>
+<div class="flex items-center justify-center">
+  <img src="/slides_images/abstract_to_automation.png" class="h-95 w-auto rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
+</div>
+</div>
 
 ---
 layout: default
 ---
 
-<div class="grid grid-cols-[60%_40%] gap-4 items-center">
-<div>
-
 <img src="/provengo_logo_transparent.png" class="absolute top-6 right-6 w-24 z-50" />
 
 # A Complete, Local-First Workflow
 
-- **Local Execution**: Command-line tool, runs on your machine.
-- **Secure**: No data transferred to servers.
-- **Workflow**:
-    1.  **Write**: Model in JavaScript.
-    2.  **Analyze**: Visualize state space, verify logic.
-    3.  **Sample**: Generate random or full test scenarios.
-    4.  **Run**: Execute scenarios against the system.
-    5.  **Report**: Review detailed execution reports.
+<div class="grid grid-cols-[65%_35%] gap-8 items-center mt-8">
+<div class="space-y-2">
+
+- <strong class="text-blue-800">Local Execution</strong>: Runs entirely on your machine or CI runner. No dependency on 3rd party servers.
+
+- <strong class="text-blue-800">Secure</strong>: Your data, models, and tests never leave your infrastructure.
+
+- <strong class="text-blue-800">The Workflow</strong>:
+    1.  **Write**: Define the model using standard JavaScript.
+    2.  **Analyze**: Visualize the state space to feel and verify the logic.
+    3.  **Sample**: Generate test suites.
+    4.  **Run**: Execute against the system (Selenium, API, etc.).
+    5.  **Report**: Get detailed execution logs and recordings.
 
 </div>
 <div class="flex items-center justify-center">
-  <img src="/slides_images/local_first.png" class="h-60 rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
+  <img src="/slides_images/local_first.png" class="h-80 w-auto rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
 </div>
 </div>
 
@@ -565,6 +589,11 @@ layout: default
 | Manual claims processing, complex rules, strict regulations. | **Map & Automate**: Modeled every aspect of the process. | **0-25%** Cost reduction.<br>**Shorter** project timelines. |
 |  | **Policy Definition**: Regulatory compliance became straightforward. | **Simplified** compliance. |
 
+<div class="flex items-center justify-center mt-8">
+  <img src="/slides_images/insurance_support.png" class="w-full h-60 rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
+</div>
+
+
 ---
 layout: default
 ---
@@ -578,30 +607,35 @@ layout: default
 | Replace SSO system, reduce friction, ensure data safety. | **Complete Model**: Modeling desired SSO capabilities. | **50%** Reduction in STD timeline. |
 | Regulatory alignment. | **Integration**: Ensured seamless integration and compliance. | **>30%** Validated pre-implementation. |
 
+<div class="flex items-center justify-center mt-8">
+  <img src="/slides_images/bank_sso_success.png" class="w-full h-60 rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
+</div>
+
+
 ---
 layout: default
 ---
-
-<div class="grid grid-cols-[60%_40%] gap-4 items-center">
-<div>
 
 <img src="/provengo_logo_transparent.png" class="absolute top-6 right-6 w-24 z-50" />
 
 # The Bigger Picture
 ## From Complexity to Clarity and Cost Savings
 
-- **Transform Enterprise Development**: Simplify the complex.
-- **Benefits**:
-    - Ensure regulatory compliance.
-    - Improve collaboration.
-- **Results**:
-    - **15-25%** Total Cost Savings.
-    - **Up to 50%** Faster Timelines.
-    - **>30%** Requirements Validated Pre-Code.
+<div class="grid grid-cols-[55%_45%] gap-8 items-center mt-8">
+<div class="space-y-4">
+
+- <strong class="text-blue-800">Transform Enterprise Development</strong>: We simplify the complex, untangling the knots of legacy processes.
+- <strong class="text-blue-800">Strategic Benefits</strong>:
+    - **Compliance**: Ensure every regulatory requirement is met and traceable.
+    - **Collaboration**: Unite Business, Dev, and QA under one shared model.
+- <strong class="text-blue-800">Measurable Results</strong>:
+    - <strong class="text-blue-800">15-25%</strong> Total Cost Savings.
+    - <strong class="text-blue-800">Up to 50%</strong> Faster Delivery Timelines.
+    - <strong class="text-blue-800">>30%</strong> Requirements Validated Pre-Code.
 
 </div>
 <div class="flex items-center justify-center">
-  <img src="/slides_images/roi_impact.png" class="h-60 rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
+  <img src="/slides_images/roi_impact.png" class="h-80 w-auto rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
 </div>
 </div>
 
@@ -613,12 +647,21 @@ layout: default
 
 # Robust & Secure Toolchain
 
-- **Local Execution**: Runs on local machine/CI. No internet required.
-- **Zero Data Transfer**: No models/code sent to cloud.
-- **Integrations**:
-    - **Selenium Manager**: Auto web driver sync.
-    - **IDE Support**: VSCode Plugin (Provengo Studio).
-- **Platform**: Linux, Mac, Windows.
+<div class="grid grid-cols-[55%_45%] gap-8 items-center mt-8">
+<div class="space-y-4">
+
+- <strong class="text-blue-800">Local Execution</strong>: The engine runs 100% on your local machine or CI server. No internet connection required for execution.
+- <strong class="text-blue-800">Zero Data Transfer</strong>: Your sensitive models, test data, and reports never leave your network. No cloud upload.
+- <strong class="text-blue-800">Integrations</strong>:
+    - **Selenium Manager**: Automatic management and synchronization of web drivers.
+    - **IDE Support**: Best-in-class VSCode extension for modeling and debugging.
+- <strong class="text-blue-800">Cross-Platform</strong>: Full support for Linux, Mac, and Windows environments.
+
+</div>
+<div class="flex items-center justify-center">
+  <img src="/slides_images/secure_toolchain.png" class="h-80 w-auto rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
+</div>
+</div>
 
 ---
 layout: default
@@ -628,12 +671,24 @@ layout: default
 
 # Ready to Simplify the Complex?
 
-- **Transform**: Intricate processes -> Streamlined systems.
-- **Support**: Installation, training, process optimisation.
+<div class="grid grid-cols-[55%_45%] gap-8 items-center mt-8">
+<div class="space-y-4">
+
+- <strong class="text-blue-800">Transform Your Process</strong>: Move from intricate, fragile manual testing to robust, streamlined model-based systems.
+- <strong class="text-blue-800">We Are Here to Help</strong>:
+    - **Installation**: Quick setup and onboarding.
+    - **Training**: Hands-on workshops for your team.
+    - **Optimization**: Tailored advice for your specific domain.
 
 ### Contact Us
 - **Email**: `hello@provengo.ai`
 - **HQ**: Tel Aviv, Israel / Boston, USA
+
+</div>
+<div class="flex items-center justify-center">
+  <img src="/slides_images/simplify_complexity.png" class="h-80 w-auto rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
+</div>
+</div>
 
 ---
 
@@ -642,9 +697,20 @@ layout: default
 
 # Success Stories
 
-- Customers with complex concurrency patterns  
-- Found bugs undetectable with standard testing  
-- Improved coverage + reduced manual efforts
+<div class="grid grid-cols-[55%_45%] gap-8 items-center mt-8">
+<div class="space-y-4">
+
+- <strong class="text-blue-800">Taming Concurrency</strong>: We helped customers utilizing complex parallel workflows identify and fix race conditions that were previously impossible to reproduce.
+- <strong class="text-blue-800">Deep Bug Detection</strong>: Our model-based approach uncovered logic errors buried deep within state transitions, undetectable by standard linear scripts.
+- <strong class="text-blue-800">Efficiency Boost</strong>:
+    - **Coverage**: Explored edge cases automatically.
+    - **Effort**: Significantly reduced the burden of manual regression testing.
+
+</div>
+<div class="flex items-center justify-center">
+  <img src="/slides_images/success_stories_trophy.png" class="h-80 w-auto rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
+</div>
+</div>
 
 ---
 
