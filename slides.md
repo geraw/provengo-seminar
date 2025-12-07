@@ -414,23 +414,23 @@ A layered architecture for model-based testing:
 layout: default
 ---
 
-<div class="grid grid-cols-[60%_40%] gap-4 items-center">
-<div>
-
 <img src="/provengo_logo_transparent.png" class="absolute top-6 right-6 w-24 z-50" />
 
 # The Blueprint is Brittle
 ## Why Traditional BDD is Reaching Its Limits
 
-- **The Promise**: BDD aimed to bridge the business-technical divide.
-- **The Reality**:
-    - Maintenance nightmare of fragile test suites.
-    - Disconnect between Gherkin feature files and underlying logic.
-    - "Easy to write markup" often creates more work than it saves.
+<div class="grid grid-cols-[55%_45%] gap-8 items-center mt-8">
+<div class="space-y-4">
+
+- <strong class="text-blue-800">The Promise</strong>: Behavior-Driven Development (BDD) promised to bridge the gap between business requirements and technical implementation.
+- <strong class="text-blue-800">The Reality</strong>: Instead of clarity, we often get a maintenance nightmare.
+    - Fragile test suites that break with every UI change.
+    - A deep disconnect between Gherkin feature files and the underlying system logic.
+    - The "easy to write markup" creates a facade of simplicity but adds significant overhead.
 
 </div>
 <div class="flex items-center justify-center">
-  <img src="/slides_images/brittle_bdd.png" class="h-60 rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
+  <img src="/slides_images/brittle_bdd.png" class="h-80 w-auto rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
 </div>
 </div>
 
