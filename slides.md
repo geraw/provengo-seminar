@@ -17,14 +17,15 @@ Ben-Gurion University of the Negev
 <div class="grid grid-cols-[60%_40%] gap-4">
 <div>
 
+
 - We wanted to prove that our research ideas are practical
 
-  - We beleived that we have programming methaphore can change the world 😎
+  - We believed that our programming metaphor could change the world 😎
 
-- We identified a domain where our research ideas seems most advantageous 
+- We identified a domain where our research ideas seemed most advantageous
   - Based on a MEMIMAD project we ran with IAI
 
-  - We found that our research ideas can be applied to testing
+  - We found that our research ideas could be applied to testing
 
   - We planned to first take testing then take Berlin
 
@@ -224,7 +225,7 @@ bthread("No two COLD in a row", function() {
 
 ---
 
-# Satelite project 
+# Satellite project 
 
 <div class="grid grid-cols-2 gap-4 h-full">
 <div class="text-sm leading-tight">
@@ -649,18 +650,6 @@ layout: default
 
 <div class="grid grid-cols-[55%_45%] gap-8 items-center mt-8">
 <div class="space-y-4">
-
-- <strong class="text-blue-800">Local Execution</strong>: The engine runs 100% on your local machine or CI server. No internet connection required for execution.
-- <strong class="text-blue-800">Zero Data Transfer</strong>: Your sensitive models, test data, and reports never leave your network. No cloud upload.
-- <strong class="text-blue-800">Integrations</strong>:
-    - **Selenium Manager**: Automatic management and synchronization of web drivers.
-    - **IDE Support**: Best-in-class VSCode extension for modeling and debugging.
-- <strong class="text-blue-800">Cross-Platform</strong>: Full support for Linux, Mac, and Windows environments.
-
-</div>
-<div class="flex items-center justify-center">
-  <img src="/slides_images/secure_toolchain.png" class="h-80 w-auto rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
-</div>
 </div>
 
 ---
@@ -686,7 +675,7 @@ layout: default
 
 </div>
 <div class="flex items-center justify-center">
-  <img src="/slides_images/simplify_complexity.png" class="h-80 w-auto rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
+  <img src="/slides_images/simplify_complexity.png" class="h-90 w-auto rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
 </div>
 </div>
 
@@ -701,14 +690,16 @@ layout: default
 <div class="space-y-4">
 
 - <strong class="text-blue-800">Taming Concurrency</strong>: We helped customers utilizing complex parallel workflows identify and fix race conditions that were previously impossible to reproduce.
+
 - <strong class="text-blue-800">Deep Bug Detection</strong>: Our model-based approach uncovered logic errors buried deep within state transitions, undetectable by standard linear scripts.
 - <strong class="text-blue-800">Efficiency Boost</strong>:
     - **Coverage**: Explored edge cases automatically.
+
     - **Effort**: Significantly reduced the burden of manual regression testing.
 
 </div>
 <div class="flex items-center justify-center">
-  <img src="/slides_images/success_stories_trophy.png" class="h-80 w-auto rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
+  <img src="/slides_images/success_stories_trophy.png" class="h-90 w-auto rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
 </div>
 </div>
 
@@ -722,7 +713,9 @@ layout: default
 <div class="space-y-4">
 
 - <strong class="text-blue-800">Deep Tech Environment</strong>: Navigating a challenging fundraising landscape requires proving deep technical value over hype.
-- <strong class="text-blue-800">Lean Engineering</strong>: We prioritize talent density and efficiency, building a robust core with a focused team.
+
+- <strong class="text-blue-800">Lean Engineering</strong>: We are a lean startup, building a robust core with a focused team.
+
 - <strong class="text-blue-800">Customer-Centric Growth</strong>:
     - **Pilots**: Demonstrating immediate ROI in real-world environments.
     - **Value**: Shifting from "potential" to "proven impact".
@@ -734,8 +727,6 @@ layout: default
 </div>
 
 ---
-
-<img src="/provengo_logo_transparent.png" class="absolute top-6 right-6 w-24 z-50" />
 
 <img src="/provengo_logo_transparent.png" class="absolute top-6 right-6 w-24 z-50" />
 
@@ -784,4 +775,28 @@ layout: default
 
 ---
 
+<img src="/provengo_logo_transparent.png" class="absolute top-6 right-6 w-24 z-50" />
+
 # Thank You
+## Q & A
+
+<div class="grid grid-cols-[55%_45%] gap-8 items-center mt-8">
+<div class="space-y-4">
+
+- <strong class="text-blue-800">We appreciate your time!</strong>
+- <strong class="text-blue-800">Next Steps</strong>:
+    - Visit **provengo.ai** for docs and downloads.
+    - Check out the **VSCode Extension**.
+    - Star us on **GitHub**: `bthink-bgu/bpjs`.
+
+### Keep in Touch
+- **Email**: `uchi@provengo.ai` / `gera@provengo.ai`
+- **LinkedIn**: Provengo
+- **Twitter**: @ProvengoAI
+
+</div>
+<div class="flex items-center justify-center">
+  <img src="/slides_images/thank_you_curtain_call.png" class="h-80 w-auto rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
+</div>
+</div>
+
