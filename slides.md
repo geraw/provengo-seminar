@@ -649,14 +649,14 @@ layout: default
 # Low-Level Interactions
 ## Reusable Sub-Models
 
-<div class="grid grid-cols-2 gap-4 mt-8">
+<div class="flex flex-col gap-1 mt-8">
 <div class="flex flex-col items-center">
-    <h3 class="mb-2 font-bold text-blue-800">Login Model</h3>
-    <img src="/slides_images/online_store_login.png" class="w-full rounded-lg shadow-lg border-2 border-gray-100" />
+    <h3 class="absolute top-68 left-45 font-bold text-blue-800">Login Model</h3>
+    <img src="/slides_images/online_store_login.png" class="-mt-5 w-3/4" />
 </div>
 <div class="flex flex-col items-center">
-    <h3 class="mb-2 font-bold text-blue-800">Add to Cart Model</h3>
-    <img src="/slides_images/online_store_add_to_cart.png" class="w-full rounded-lg shadow-lg border-2 border-gray-100" />
+    <h3 class="absolute top-125 left-45 font-bold text-blue-800">Add to Cart Model</h3>
+    <img src="/slides_images/online_store_add_to_cart.png" class="-mt-10 w-3/4" />
 </div>
 </div>
 
