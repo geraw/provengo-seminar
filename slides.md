@@ -702,12 +702,55 @@ provengo run --test-suite suite-1
 </div>
 </div>
 
+<!--
+<div dir="rtl">
+בזכות הסמנטיקה העשירה של BP, הכלי של פרובנגו יכול לסרוק את מרחב המצבים של המערכת, לייצר test suites איכותיים ולעשות ווריפיקציה לתכונות חיות ובטיחות של המערכת.
+</div>
+15 seconds
+-->
+
+
+---
+layout: default
+---
+
+<img src="/provengo_logo_transparent.png" class="absolute top-6 right-6 w-24 z-50" />
+
+# Provengo: Scenario-Driven Model-Based Testing
+
+<div class="text-sm text-gray-500 mb-4">
+<strong>Authors:</strong> Michael Bar-Sinai, Achiya Elyasaf, Gera Weiss, Yeshayahu Weiss <br>
+<strong>Venue:</strong> IEEE/ACM International Conference on Automated Software Engineering (ASE) 2023
+</div>
+
+<div class="grid grid-cols-[55%_45%] gap-8 items-center mt-8">
+<div class="space-y-4">
+
+- <strong class="text-blue-800">Active Requirements</strong>: Transforms static requirements into executable code that validates the system.
+
+- <strong class="text-blue-800">Living Models</strong>: We directly codify user stories, flows, and business constraints into a single coherent model.
+- <strong class="text-blue-800">SDMBT Approach</strong>:
+    - **Start Simple**: Begin with basic scenarios <br> (Happy Paths).
+    
+    - **Iterate**: Incrementally layer on complex constraints and edge cases.
+    - **Scale**: The model grows with the system, remaining a valid test source.
+
+
+
+</div>
+<div class="flex items-center justify-center">
+  <img src="/slides_images/scenario_driven_mbt.png" class="h-90 w-auto rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
+</div>
+</div>
 
 <!--
 <div dir="rtl">
-Speaker notes here...
+לסיכום, פרובנגו הוא כלי שמאפשר לנו להפוך את המודל שלנו לדרישות בפועל של המערכת, המודל כבר לא סתם משהו מעיק שצריך לתחזק אלא משמש אותנו לתיאור המודל, בדיקה ווריפיקציה של המערכת.
+
+הגישה של scenario driven model-based testing מאפשר לנו אינקרמנטליות. להתחיל עם מודל פשוט, כמה תסריטים בודדים, ובצורה איטרטיבית להוסיף מקרי קצה והגבלות. זה מאפשר למודל לגדול בצורה דינמית ועדיין להשאר מקור אמין לבדיקות.
 </div>
---> 
+30 seconds
+-->
 
 ---
 
@@ -735,9 +778,14 @@ Achiya Elyasaf, Eitan Farchi, Oded Margalit, Gera Weiss, Yeshayahu Weiss, <br> I
 
 <!--
 <div dir="rtl">
-Speaker notes here...
+כדי שכל הטוב הזה יקרה, נדרשה עבודה רבה מהצד המחקרי. כמובן שמספר מאמרים הוקדשו לשיטת השימוש בפורבנגו לבדיקות. 
+
+בעולם הבדיקות אחד הדברים הקדושים הוא coverage. בבדיקות יחידה קל להגדיר את זה - כמות ה statements או branches בקוד שמכסים. 
+הבעיה היא, שכאשר מדברים על בדיקות קופסה שחורה, כמו אינטגרציה או בדיקות מערכת - אין קריטריונים. גם כאשר מדברים 
+
+חוץ ממאמרים שמדברים על הכלי עצמו ועל בדיקות תוכנה עם פרובנגו, כתבנו גם מאמרים 
 </div>
---> 
+-->
 
 ---
 
@@ -853,45 +901,6 @@ layout: default
 </div>
 <div class="flex items-center justify-center">
   <img src="/slides_images/single_source_of_truth.png" class="h-80 w-auto rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
-</div>
-</div>
-
-<!--
-<div dir="rtl">
-Speaker notes here...
-</div>
---> 
-
----
-layout: default
----
-
-<img src="/provengo_logo_transparent.png" class="absolute top-6 right-6 w-24 z-50" />
-
-# Provengo: Scenario-Driven Model-Based Testing
-
-<div class="text-sm text-gray-500 mb-4">
-<strong>Authors:</strong> Michael Bar-Sinai, Achiya Elyasaf, Gera Weiss, Yeshayahu Weiss <br>
-<strong>Venue:</strong> IEEE/ACM International Conference on Automated Software Engineering (ASE) 2023
-</div>
-
-<div class="grid grid-cols-[55%_45%] gap-8 items-center mt-8">
-<div class="space-y-4">
-
-- <strong class="text-blue-800">Active Requirements</strong>: Transforms static requirements into executable code that validates the system.
-
-- <strong class="text-blue-800">Living Models</strong>: We directly codify user stories, flows, and business constraints into a single coherent model.
-- <strong class="text-blue-800">SDMBT Approach</strong>:
-    - **Start Simple**: Begin with basic scenarios <br> (Happy Paths).
-    
-    - **Iterate**: Incrementally layer on complex constraints and edge cases.
-    - **Scale**: The model grows with the system, remaining a valid test source.
-
-
-
-</div>
-<div class="flex items-center justify-center">
-  <img src="/slides_images/scenario_driven_mbt.png" class="h-90 w-auto rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
 </div>
 </div>
 
