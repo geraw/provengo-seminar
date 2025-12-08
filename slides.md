@@ -81,7 +81,7 @@ Ben-Gurion University of the Negev
 - **2010–2020** — Research expansion  
 - **2017–2020** — BPjs implementation & public open source release
 - **2021** — COBP development & patent registeration on BPjs for testing
-- **2022** — Provengo founded via Oasis accelerator  
+- **2022** — Provengo founded via OAZIS accelerator  
 - **2022–present** — Customer successes + platform development
 - **2022–present** — Research expansion in collaboration with Provengo
 
@@ -450,7 +450,7 @@ onMounted(() => {
   <img src="/provengo_mbt_diagram.png" class="h-70 w-auto rounded-lg shadow-md border border-gray-200 object-contain" alt="Model-Based Testing Concept" />
   <div class="relative flex flex-col items-center">
     <img src="/provengo_founders_comic.png" class="h-30 w-auto rounded-lg shadow-xl border-0 border-gray-100 object-cover block" alt="Provengo Founders" />
-    <p class="absolute -bottom-10 text-[10px] text-center leading-none bg-white/80 px-1 rounded">Supported by OASIS</p>
+    <p class="absolute -bottom-10 text-[10px] text-center leading-none bg-white/80 px-1 rounded">Supported by OAZIS</p>
   </div>
 </div>
 </div>
