@@ -709,7 +709,7 @@ layout: default
 
 <img src="/provengo_logo_transparent.png" class="absolute top-6 right-6 w-24 z-50" />
 
-# Case Study: Insurance Claims Processing
+# Demo: Insurance Claims Processing
 
 | Challenge | Solution | Impact |
 | --- | --- | --- |
