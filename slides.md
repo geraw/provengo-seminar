@@ -684,8 +684,7 @@ onMounted(() => {
     - We use Provengo to generate a test suite that satisfies specific coverage criteria.
     - We can explicitly request scenarios that hit specific events or states.
 
-</div>
-<div class="flex flex-col items-start bg-gray-900 rounded-lg p-4 text-white font-mono text-sm overflow-x-auto w-full">
+<div class="flex flex-col items-start bg-gray-900 rounded-lg p-4 text-white font-mono text-xs overflow-x-auto w-full">
 <div class="text-gray-400 mb-2"># Generate tests covering "Out of Stock" events</div>
 
 ```bash
@@ -699,6 +698,11 @@ provengo analyze -f html \
 ```bash
 provengo run --test-suite suite-1
 ```
+</div>
+
+</div>
+<div class="flex items-center justify-center">
+  <img src="/provengo-graph.png" class="max-h-100 w-auto rounded-lg shadow-xl border-2 border-gray-100 object-contain" />
 </div>
 </div>
 
@@ -921,7 +925,7 @@ layout: default
 <div class="grid grid-cols-[55%_45%] gap-8 items-center mt-8">
 <div class="space-y-4">
 
-- <strong class="text-blue-800">Easy to use and to read DSLs</strong>: A powerful engine to define parameters, constraints, and their inter-dependencies directly within the model.
+- <strong class="text-blue-800">Easy to use and to read DSLs</strong>: A powerful tool to define parameters, constraints, and their inter-dependencies directly within the model.
 - <strong class="text-blue-800">Eliminate Misinterpretation</strong>: Replace vague documents with strict code.
 - <strong class="text-blue-800">Visualisation</strong>: The model automatically generates the full state space, making gaps in logic visible immediately.
 
