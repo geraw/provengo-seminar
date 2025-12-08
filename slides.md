@@ -303,6 +303,7 @@ BP מאפשר את אותו הדבר כמו הסוס. תגדיר רק את הד�
 
 זה החזון שלנו לעולם התכנות.
 </div>
+30 seconds
 -->
 
 ---
@@ -333,9 +334,22 @@ BP מאפשר את אותו הדבר כמו הסוס. תגדיר רק את הד�
   - <span class="text-blue-600">**Pivot to testing as a market entry point**</span>
 </div>
 
+<script setup>
+import { ref, onMounted } from 'vue'
+
+const satelliteVideo = ref(null)
+
+onMounted(() => {
+  if (satelliteVideo.value) {
+    satelliteVideo.value.currentTime = 10
+    satelliteVideo.value.playbackRate = 2.0
+  }
+})
+</script>
+
 <div class="relative h-full w-full">
   <div class="absolute inset-0 flex items-start justify-center pt-4">
-    <video controls autoplay muted loop class="w-full h-auto rounded-lg shadow-lg">
+    <video ref="satelliteVideo" controls autoplay muted loop class="w-full h-auto rounded-lg shadow-lg">
       <source src="/On-Board_Satellite_Software_Development_Testing.mp4" type="video/mp4">
     </video>
   </div>
@@ -356,9 +370,13 @@ BP מאפשר את אותו הדבר כמו הסוס. תגדיר רק את הד�
 <div dir="rtl">
 אוקי, אז עד עכשיו, ראינו את הפרדיגמה על דוגמת צעצוע, אבל מה אפשר לעשות עם זה?
 
-ב-2020 התחלנו פרויקט עם התעשייה האווירית, בו 
+ב-2020 התחלנו פרויקט עם התעשייה האווירית, בו פיתחנו לווין אמיתי באמצעות BP. בפינה הימנית עליונה רואים את החומרה האמיתי של הלווין, מתקשרת עם חומרה חיצונית.  
 
+בפרויקט הזה הדגמנו גם התכנות לבניית מערכות שלמות וגם את היכולת לבדוק מערכות כקופסה שחורה באמצעות BP.
+
+זו היתה נקודת המפנה שבה הבנו שעולם הבדיקות יכול להיות כרטיס הכניסה שלנו לתעשייה.
 </div>
+40 seconds
 -->
 
 ---
@@ -397,13 +415,15 @@ BP מאפשר את אותו הדבר כמו הסוס. תגדיר רק את הד�
 
 <!--
 <div dir="rtl">
-Speaker notes here...
+כשהבנו שיש לנו משהו ביד, כתבנו פטנט שעיקרו:
+המשתמש מגדיר תסריטים של דברים שהוא רוצה לבדוק, ואנחנו מייצרים מזה מודל מורכב של מערכת הבדיקות.
+
+מהמודל אנחנו יכולים לייצר תסריטי בדיקה, test suites, וגם לייצר אנליזות ודוחות לגבי המוכנות של המוצר לצאת לשוק.
 </div>
---> 
+20 seconds
+-->
 
 ---
-
-
 
 # Founding Provengo (2022)
 
@@ -435,13 +455,16 @@ Speaker notes here...
 </div>
 </div>
 
-
-
 <!--
 <div dir="rtl">
-Speaker notes here...
+השלב הבא - הקמת חברה. הצטרפנו למחזור הראשון של Oasis של BGN, חברת המסחור של האוניברסיטה, שם הכרנו את דרור אלעד וביחד הקמנו את החברה. 
+
+המוקד של החברה - מיצוי הפוטנציאל של מרחב הבדיקות. יצירת טסטים באופן אוטומטי מתוך מודלים פשוטים. הטסטרים צריכים להתמקד במה לבדוק, בדרישות, ואנחנו ננתח את זה ונבנה באמצעות אלגוריתמים את הבדיקות עצמן.
+
+דרור המנכ"ל, מיכאל (שיצר את BPjs ובינתיים כבר סיים את הדוקטורט) הוא ה chief of technology, וגרא ואני scientific founders, ואני אסביר את ההגדרה הזו מיד.
 </div>
---> 
+45 seconds
+-->
 
 ---
 
@@ -471,9 +494,14 @@ Speaker notes here...
 
 <!--
 <div dir="rtl">
-Speaker notes here...
+בד"כ כשיש פטנט אקדמי, למשל מישהו רושם פטנט על חומר חדש שהוא מצא. כדי למסחר אותו, צריך למצוא דרך לייצר אותו באופן מסחרי, וזה כבר לא עניינה של אקדמיה. לכן, BGN היתה בטוחה שברגע שרשמנו פטנט - החברה עצמה לא מעניינת אותנו. במקרה שלנו זה לא אפשרי. 
+
+מצד אחד, לא רצינו להיות עובדי חברה, רצינו להמשיך לחקור. מצד שני - ברור שהחברה צריכה גב מחקרי כדי לקדם רעיון שהוא יושב על basic science גולמי.
+
+כך נוצר שיתוף פעולה סימביוטי מאוד מעניין שבו פרובנגו מספקת data ומוצר ואנחנו מספקים את הפתרונות המדעיים לצרכים של החברה. 
 </div>
---> 
+45 seconds
+-->
 
 ---
 
@@ -488,7 +516,7 @@ A layered architecture for model-based testing:
 - **Analysis Tools & Engines** (Top)
   - Verification, Sampling, Coverage Analysis
   - Automated test suite creation
-- **Libraries \ DSLs**
+- **Libraries / DSLs**
   - Domain Specific Languages for testing
   - Integrations for Actuators/Sensors (e.g., Selenium)
 - **BP Core** (Foundation)
@@ -605,6 +633,11 @@ layout: default
 
 # Provengo: Scenario-Driven Model-Based Testing
 
+<div class="text-sm text-gray-500 mb-4">
+<strong>Authors:</strong> Michael Bar-Sinai, Achiya Elyasaf, Gera Weiss, Yeshayahu Weiss <br>
+<strong>Venue:</strong> IEEE/ACM International Conference on Automated Software Engineering (ASE) 2023
+</div>
+
 <div class="grid grid-cols-[55%_45%] gap-8 items-center mt-8">
 <div class="space-y-4">
 
@@ -616,6 +649,8 @@ layout: default
     
     - **Iterate**: Incrementally layer on complex constraints and edge cases.
     - **Scale**: The model grows with the system, remaining a valid test source.
+
+
 
 </div>
 <div class="flex items-center justify-center">
@@ -818,50 +853,74 @@ Speaker notes here...
 
 ---
 
-<img src="/provengo_logo_transparent.png" class="absolute top-6 right-6 w-24 z-50" />
+# Prestashop Demonstration
 
-# Low-Level Interactions
-## Reusable Sub-Models
+<script setup>
+import { ref, onMounted } from 'vue'
 
-<div class="flex flex-col gap-1 mt-8">
-<div class="flex flex-col items-center">
-    <h3 class="absolute top-68 left-45 font-bold text-blue-800">Login Model</h3>
-    <img src="/slides_images/online_store_login.png" class="-mt-5 w-3/4" />
-</div>
-<div class="flex flex-col items-center">
-    <h3 class="absolute top-125 left-45 font-bold text-blue-800">Add to Cart Model</h3>
-    <img src="/slides_images/online_store_add_to_cart.png" class="-mt-10 w-3/4" />
-</div>
-</div>
+const videoEl = ref(null)
 
-<!--
-<div dir="rtl">
-Speaker notes here...
-</div>
---> 
+onMounted(() => {
+  if (videoEl.value) {
+    videoEl.value.currentTime = 90
+    videoEl.value.playbackRate = 2.0
+  }
+})
+</script>
 
----
+<div class="grid grid-cols-[60%_40%] gap-2 mt-4 h-full">
 
-<img src="/provengo_logo_transparent.png" class="absolute top-6 right-6 w-24 z-50" />
-
-# High-Level Integration
-## Composing End-to-End Tests
-
-<div class="grid grid-cols-[40%_60%] gap-8 items-center mt-8">
-<div class="space-y-4">
-
-- <strong class="text-blue-800">Composition</strong>:
-
-    - We compose the low-level blocks (Open page, Login, Add to cart, Checkout) into high-level scenarios.
-
-- <strong class="text-blue-800">Verification</strong>:
-    - We can verify "Admin takes item out of stock" vs "User tries to buy item".
-    - Provengo explores the interleavings of these scenarios.
+<!-- Left Column: Explanations -->
+<div class="grid grid-cols-1">
+  
+  <!-- Phase 1: Low-Level Interactions (Visible initially, Hidden on Click 1) -->
+  <div v-click.hide="1" class="col-start-1 row-start-1 space-y-2">
+    <div>
+      <h3 class="text-xl font-bold text-blue-800">Low-Level Interactions</h3>
+      <h4 class="text-lg text-gray-500">Reusable Sub-Models</h4>
+    </div>
     
+  <div class="flex flex-col gap-0">
+    <div class="flex flex-col items-center">
+        <strong class="mb-1 text-sm text-blue-800">Login Model</strong>
+        <img src="/slides_images/online_store_login.png" class="w-full" />
+    </div>
+    <div class="flex flex-col items-center">
+        <strong class="mb-1 text-sm text-blue-800">Add to Cart Model</strong>
+        <img src="/slides_images/online_store_add_to_cart.png" class="w-full shadow-md rounded-lg" />
+    </div>
+  </div>
+  </div>
+
+  <!-- Phase 2: High-Level Integration (Visible on Click 1) -->
+  <div v-click="1" class="col-start-1 row-start-1 space-y-4">
+    <div>
+      <h3 class="text-xl font-bold text-blue-800">High-Level Integration</h3>
+      <h4 class="text-lg text-gray-500">Composing End-to-End Tests</h4>
+    </div>
+
+  <div class="space-y-2 text-sm">
+    <div class="bg-blue-50 p-1 rounded">
+      <strong class="text-blue-800 block mb-0">Composition</strong>
+      We compose the low-level blocks into high-level scenarios.
+    </div>
+    <div class="bg-blue-50 p-1 rounded">
+      <strong class="text-blue-800 block mb-0">Verification</strong>
+      We can verify "Admin takes item out of stock" vs "User tries to buy item". Provengo explores the interleavings.
+    </div>
+    <img src="/slides_images/online_store_end_to_end.png" class="w-full shadow-md rounded-lg mt-2" />
+  </div>
+  </div>
+
 </div>
-<div class="flex items-center justify-center">
-  <img src="/slides_images/online_store_end_to_end.png" class="w-full" />
+
+<!-- Right Column: Video -->
+<div class="flex items-start justify-center h-full pt-20">
+    <video ref="videoEl" controls autoplay muted loop class="w-full h-auto rounded-lg shadow-lg">
+      <source src="/Provengo-BPFlow-PrestaShop.mp4" type="video/mp4">
+    </video>
 </div>
+
 </div>
 
 <!--
