@@ -530,12 +530,12 @@ A layered architecture for model-based testing:
 </div>
 </div>
 
-
 <!--
 <div dir="rtl">
-Speaker notes here...
+טוב, אז עבר קצת זמן, בינתיים יש לנו את ה provengo cli שזה כלי שיושב מעל bpjs, מוסיף לו כל מיני domain-specific languages בשביל טסטים. מעל זה יש ספריות לחבר את המודל לכלי אוטומציה. לבסוף, מעל לכל, יש כלים מתקדמים לאנליזה, לכיסוי הבדיקות, ולווריפיקציה של המודל ושל המערכת.
 </div>
---> 
+20 seconds
+-->
 
 ---
 
@@ -863,7 +863,7 @@ const videoEl = ref(null)
 onMounted(() => {
   if (videoEl.value) {
     videoEl.value.currentTime = 90
-    videoEl.value.playbackRate = 2.0
+    videoEl.value.playbackRate = 3
   }
 })
 </script>
