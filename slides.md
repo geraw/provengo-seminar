@@ -682,15 +682,16 @@ onMounted(() => {
 
 - <strong class="text-blue-800">Automatic Generation</strong>:
     - We use Provengo to generate a test suite that satisfies specific coverage criteria.
-    - We can explicitly request scenarios that hit specific events or states.
+    - For example, we can explicitly request scenarios that hit specific events or states.
 
-<div class="flex flex-col items-start bg-gray-900 rounded-lg p-4 text-white font-mono text-xs overflow-x-auto w-full">
+<div class="flex flex-col items-start bg-gray-900 rounded-lg p-4 text-white font-mono text-xs overflow-x-auto w-full scale-70 origin-top-left">
 <div class="text-gray-400 mb-2"># Generate tests covering "Out of Stock" events</div>
 
 ```bash
-provengo analyze -f html \
+provengo ensemble \
+  --algorithm genetic \
   --coverage-goal "event(OutOfStock)" \
-  --limit 100
+  --size 1000
 ```
 
 <div class="text-gray-400 mt-4 mb-2"># Run the generated suite</div>
@@ -701,7 +702,7 @@ provengo run --test-suite suite-1
 </div>
 
 </div>
-<div class="flex items-center justify-center">
+<div class="flex items-center justify-center -mt-30">
   <img src="/provengo-graph.png" class="max-h-100 w-auto rounded-lg shadow-xl border-2 border-gray-100 object-contain" />
 </div>
 </div>
