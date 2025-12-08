@@ -922,7 +922,7 @@ layout: default
 <div class="grid grid-cols-[55%_45%] gap-8 items-center mt-8">
 <div class="space-y-4">
 
-- <strong class="text-blue-800">Combi Library</strong>: A powerful engine to define parameters, constraints, and their inter-dependencies directly within the model.
+- <strong class="text-blue-800">Easy to use and to read DSLs</strong>: A powerful engine to define parameters, constraints, and their inter-dependencies directly within the model.
 - <strong class="text-blue-800">Eliminate Misinterpretation</strong>: Replace vague documents with strict code.
 - <strong class="text-blue-800">Visualisation</strong>: The model automatically generates the full state space, making gaps in logic visible immediately.
 
@@ -1133,8 +1133,8 @@ Speaker notes here...
 
 # Future Vision
 
-<div class="grid grid-cols-[65%_35%] gap-8 items-center mt-8">
-<div class="space-y-4">
+<div class="grid grid-cols-[65%_35%] gap-8 items-center -mt-6">
+<div class="space-y-2">
 
 - <strong class="text-blue-800">Advanced Authoring</strong>:
     - **Visual Studio**: Intuitive drag-and-drop scenario creation.
@@ -1144,6 +1144,9 @@ Speaker notes here...
     - **Cloud SaaS**: High-throughput, fully managed event exploration.
     - **Deep Verification**: Stronger model-checking integration for mathematical certainty.
 - <strong class="text-blue-800">Ecosystem</strong>: Domain-specific test libraries for rapid adoption in Fintech, Healthcare, and IoT.
+
+- <strong class="text-blue-800">A new pivot</strong>: We now have two big clients in the field of runbook automation.
+
 
 </div>
 <div class="flex items-center justify-center">
