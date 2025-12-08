@@ -7,9 +7,21 @@ colorSchema: "light"
 # From Research to Startup  
 ## The Provengo Story  
 
+<div class="absolute top-10 right-10 flex gap-6">
+  <img src="/provengo_logo_transparent.png" class="h-12" />
+  <img src="/bgu_logo.png" class="h-12" />
+</div>
+
 ### Achiya Elyasaf & Gera Weiss  
 Faculty of Computer and Information Science   
 Ben-Gurion University of the Negev 
+
+<!--
+<div dir="rtl">
+לפני מספר שנים, גרא ואני החלטנו להקים חברת סטארט אפ בתחום של בדיקות תוכנה.
+כל הקמה של חברה חדשה היא כמובן מורכבת ומאתגרת, אבל בתהליך שאנחנו עשינו, ועדיין עושים, יש מרכיבים רבים המשלבים אקדמיה ותעשייה באופן שעשוי לעניין את הקהל שיושב פה ולכן חשבנו שזה נושא טוב לסמינר.
+</div>
+--> 
 
 ---
 
@@ -46,6 +58,14 @@ Ben-Gurion University of the Negev
 </div>
 </div>
 
+<!--
+<div dir="rtl">
+אז כמו כל סטרט אפ - זה מתחיל ברעיון שישנה את העולם. במקרה שלנו, היתה לנו פרדיגמת תכנות חדשה, שנדבר עליה בהמשך, שהאמנו שהיא יכולה לשנות לטובה את עולם התכנות.
+
+
+</div>
+-->
+
 ---
 
 # Timeline Overview
@@ -64,6 +84,12 @@ Ben-Gurion University of the Negev
 
 
 
+
+<!--
+<div dir="rtl">
+Speaker notes here...
+</div>
+--> 
 
 ---
 
@@ -101,6 +127,12 @@ Ben-Gurion University of the Negev
   <p>1. David Harel, Assaf Marron, Gera Weiss. "Behavioral programming." Communications of the ACM 55.7 (2012): 90-100.</p>
   <p>2. Achiya Elyasaf. "Context-Oriented Behavioral Programming." Information and Software Technology 133 (2021): 106504.</p> 
 </div>
+
+<!--
+<div dir="rtl">
+Speaker notes here...
+</div>
+--> 
 
 ---
 
@@ -165,6 +197,12 @@ bthread("No two COLD in a row", function() {
 
 </div>
 </div>
+<!--
+<div dir="rtl">
+Speaker notes here...
+</div>
+--> 
+
 ---
 
 # BPjs: an open-source implementation of BP
@@ -206,6 +244,12 @@ bthread("No two COLD in a row", function() {
 </div>
 </div>
 
+<!--
+<div dir="rtl">
+Speaker notes here...
+</div>
+--> 
+
 ---
 
 # Our view of the future of programming
@@ -223,6 +267,12 @@ bthread("No two COLD in a row", function() {
     <p class="text-sm">Like driving a carriage: The driver specifies the general direction, and the horse handles the details (obstacles, footing).</p>
   </div>
 </div>
+
+<!--
+<div dir="rtl">
+Speaker notes here...
+</div>
+--> 
 
 ---
 
@@ -271,6 +321,12 @@ bthread("No two COLD in a row", function() {
 
 
 
+<!--
+<div dir="rtl">
+Speaker notes here...
+</div>
+--> 
+
 ---
 
 # A patent for using BP for testing satellites (2021)
@@ -304,6 +360,12 @@ bthread("No two COLD in a row", function() {
   <img src="/provengo_workflow_comic.png" class="h-90 w-200 rounded-lg" alt="Provengo Workflow" />
 </div>
 </div>
+
+<!--
+<div dir="rtl">
+Speaker notes here...
+</div>
+--> 
 
 ---
 
@@ -341,6 +403,12 @@ bthread("No two COLD in a row", function() {
 
 
 
+<!--
+<div dir="rtl">
+Speaker notes here...
+</div>
+--> 
+
 ---
 
 # BGN Agreement
@@ -366,6 +434,12 @@ bthread("No two COLD in a row", function() {
   <img src="/bgn_provengo_lego_v2.png" class="h-90 w-auto rounded-lg shadow-xl border-2 border-gray-100 object-cover" alt="BGN-Provengo Symbiosis" />
 </div>
 </div>
+
+<!--
+<div dir="rtl">
+Speaker notes here...
+</div>
+--> 
 
 ---
 
@@ -395,6 +469,12 @@ A layered architecture for model-based testing:
 </div>
 
 
+<!--
+<div dir="rtl">
+Speaker notes here...
+</div>
+--> 
+
 ---
 
 <img src="/provengo_logo_transparent.png" class="absolute top-6 right-6 w-24 z-50" />
@@ -416,6 +496,12 @@ A layered architecture for model-based testing:
   <img src="/slides_images/living_vs_dead.png" class="h-80 w-auto rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
 </div>
 </div>
+
+<!--
+<div dir="rtl">
+Speaker notes here...
+</div>
+--> 
 
 ---
 layout: default
@@ -441,6 +527,12 @@ layout: default
 </div>
 </div>
 
+<!--
+<div dir="rtl">
+Speaker notes here...
+</div>
+--> 
+
 ---
 layout: default
 ---
@@ -464,6 +556,12 @@ layout: default
   <img src="/slides_images/single_source_of_truth.png" class="h-80 w-auto rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
 </div>
 </div>
+
+<!--
+<div dir="rtl">
+Speaker notes here...
+</div>
+--> 
 
 ---
 layout: default
@@ -490,6 +588,12 @@ layout: default
   <img src="/slides_images/scenario_driven_mbt.png" class="h-90 w-auto rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
 </div>
 </div>
+
+<!--
+<div dir="rtl">
+Speaker notes here...
+</div>
+--> 
 
 ---
 layout: default
@@ -523,6 +627,12 @@ vehicleType.whenSetTo("truck")
 </div>
 </div>
 
+<!--
+<div dir="rtl">
+Speaker notes here...
+</div>
+--> 
+
 ---
 
 <img src="/provengo_logo_transparent.png" class="absolute top-6 right-6 w-24 z-50" />
@@ -553,6 +663,12 @@ session.click("//a[contains(text(), 'Sign In')]");
 </div>
 </div>
 
+<!--
+<div dir="rtl">
+Speaker notes here...
+</div>
+--> 
+
 ---
 layout: default
 ---
@@ -581,6 +697,12 @@ layout: default
 </div>
 </div>
 
+<!--
+<div dir="rtl">
+Speaker notes here...
+</div>
+--> 
+
 ---
 layout: default
 ---
@@ -599,6 +721,12 @@ layout: default
 </div>
 
 
+<!--
+<div dir="rtl">
+Speaker notes here...
+</div>
+--> 
+
 ---
 layout: default
 ---
@@ -616,6 +744,12 @@ layout: default
   <img src="/slides_images/bank_sso_success.png" class="w-full h-60 rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
 </div>
 
+
+<!--
+<div dir="rtl">
+Speaker notes here...
+</div>
+--> 
 
 ---
 layout: default
@@ -642,6 +776,12 @@ layout: default
 </div>
 </div>
 
+<!--
+<div dir="rtl">
+Speaker notes here...
+</div>
+--> 
+
 ---
 
 <img src="/provengo_logo_transparent.png" class="absolute top-6 right-6 w-24 z-50" />
@@ -659,6 +799,12 @@ layout: default
     <img src="/slides_images/online_store_add_to_cart.png" class="w-full rounded-lg shadow-lg border-2 border-gray-100" />
 </div>
 </div>
+
+<!--
+<div dir="rtl">
+Speaker notes here...
+</div>
+--> 
 
 ---
 
@@ -681,6 +827,12 @@ layout: default
   <img src="/slides_images/online_store_end_to_end.png" class="w-full rounded-lg shadow-xl border-2 border-gray-100" />
 </div>
 </div>
+
+<!--
+<div dir="rtl">
+Speaker notes here...
+</div>
+--> 
 
 ---
 
@@ -715,6 +867,12 @@ provengo run --test-suite suite-1
 </div>
 
 
+<!--
+<div dir="rtl">
+Speaker notes here...
+</div>
+--> 
+
 ---
 
 # Generalized Coverage Criteria for <br> Combinatorial Sequence Testing
@@ -738,6 +896,12 @@ Achiya Elyasaf, Eitan Farchi, Oded Margalit, Gera Weiss, Yeshayahu Weiss, <br> I
 - <span class="text-green-600 font-bold">Practical Outcome</span>
   - A mathematically grounded method to generate minimized, high-coverage test suites from BP models.
 </div>
+
+<!--
+<div dir="rtl">
+Speaker notes here...
+</div>
+--> 
 
 ---
 
@@ -766,6 +930,12 @@ Yeshayahu Weiss, Gal Amram, Achiya Elyasaf, Eitan Farchi, Oded Margalit, Gera We
 </div>
 
 
+
+<!--
+<div dir="rtl">
+Speaker notes here...
+</div>
+--> 
 
 ---
 layout: default
@@ -797,6 +967,12 @@ layout: default
 
 
 
+<!--
+<div dir="rtl">
+Speaker notes here...
+</div>
+--> 
+
 ---
 
 # Harsh Reality 
@@ -817,6 +993,12 @@ layout: default
 <img src="/slides_images/coding_under_fire.jpg" class="h-80 w-auto rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
 </div>
 </div>
+
+<!--
+<div dir="rtl">
+Speaker notes here...
+</div>
+--> 
 
 ---
 
@@ -841,6 +1023,12 @@ layout: default
 </div>
 
 
+<!--
+<div dir="rtl">
+Speaker notes here...
+</div>
+--> 
+
 ---
 
 # Conclusion: Research ↔ Industry Reflections
@@ -862,5 +1050,8 @@ layout: default
 </div>
 </div>
 
-
-
+<!--
+<div dir="rtl">
+Speaker notes here...
+</div>
+-->
