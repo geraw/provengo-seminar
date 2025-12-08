@@ -769,13 +769,15 @@ Achiya Elyasaf, Eitan Farchi, Oded Margalit, Gera Weiss, Yeshayahu Weiss, <br> I
 <img src="/combinatorial_testing_illustration.png" class="absolute top-10 right-10 w-60 rounded-lg shadow-lg border border-gray-200 z-10" />
 
 - <span class="text-red-600 font-bold">The Challenge</span><br>
-  - How to effectively verify systems with infinite state spaces and complex sequences? <br> <br>
+  - How to effectively verify systems with infinite state spaces and complex sequences? 
+  - How to define meaningful coverage criteria for combinatorial sequences? <br>
 - <span class="text-blue-600 font-bold">Generalized Coverage</span>
   - Extending combinatorial interaction testing (CIT) to **event sequences**.
-  - Allows testers to define *projection functions* that capture domain-specific "interesting" behaviors. <br> <br>
+  - Achieved by using automata to define coverage criteria.
+  - Allows testers to define *projection functions* that capture domain-specific "interesting" behaviors. <br> 
 - <span class="text-purple-600 font-bold">Statistical Approach</span> 
   - **Bayesian Risk Assessment**: Quantifies the probability of remaining bugs based on observed successful executions.
-  - **Exploration vs. Exploitation**: Balances covering new behavioral patterns vs. deepening coverage of known risky areas. <br> <br>
+  - **Exploration vs. Exploitation**: Balances covering new behavioral patterns vs. deepening coverage of known risky areas. <br> 
 - <span class="text-green-600 font-bold">Practical Outcome</span>
   - A mathematically grounded method to generate minimized, high-coverage test suites from BP models.
 </div>
@@ -784,9 +786,17 @@ Achiya Elyasaf, Eitan Farchi, Oded Margalit, Gera Weiss, Yeshayahu Weiss, <br> I
 <div dir="rtl">
 כדי שכל הטוב הזה יקרה, נדרשה עבודה רבה מהצד המחקרי. כמובן שמספר מאמרים הוקדשו לשיטת השימוש בפורבנגו לבדיקות. 
 
-בעולם הבדיקות אחד הדברים הקדושים הוא coverage. בבדיקות יחידה קל להגדיר את זה - כמות ה statements או branches בקוד שמכסים. 
-הבעיה היא, שכאשר מדברים על בדיקות קופסה שחורה, כמו אינטגרציה או בדיקות מערכת - אין קריטריונים. גם כאשר מדברים 
+בעולם הבדיקות אחד הדברים הקדושים הוא coverage. בבדיקות יחידה קל להגדיר את זה - כמות ה statements או branches בקוד שמכסים. ה coverage הוא סוג של חוזה שאומר - אני יודע שכיסיתי X% מהקוד ולכן אפשר להוציא גרסה חדשה.
 
+הבעיה היא, שכאשר מדברים על בדיקות קופסה שחורה, כמו אינטגרציה או בדיקות מערכת - אין קריטריונים. צוות ה QA אומר שהוא עשה X בדיקות, איש הפרודקט חותם שזה בסדר וכולם יודעים שלא רק שזה לא בסדר - גם אין שום דרך לדעת כשמשהו בסדר או לא.
+
+ה coverage היחיד שמופיע בספרות בהקשר של model based testing הוא מה שנקרא 2way, שזה לפחות טסט אחד לכל צירוף של שני פרמטרים של הטסט. הבעיה היא שזה לא מספיק משמעותי. 
+
+המאמר שמוצג פה, מציג חידושים בתחום הזה שכמעט קפא על שמריו. החידוש הראשון הוא הרחבה של ההגדרה של כיסוי שיוצר תשתית מתמטית להגדרת כיסויים מותאמים דומיין. למשל - כמה אני מכסה את רכיב ההוספה לעגלה. אנחנו עושים את בעזרת שימוש באוטומטים שמהווים תת גרף של גרף המצבים ובכך מגדירים כיסוי שלו.
+
+החידוש המשמעותי השני, מגדיר מודל בייסיני שמעריך את הסיכון של המערכת, קרי מה הסיכוי שיש באג בהנתן הכיסוי.
+
+החידוש האחרון הוא פיתוח כלי מבוסס AI למציאת test suites שמשיגים איכות גבוהה במעט משאבים.
 </div>
 -->
 
@@ -816,14 +826,14 @@ Yeshayahu Weiss, Gal Amram, Achiya Elyasaf, Eitan Farchi, Oded Margalit, Gera We
 
 </div>
 
-
-
 <!--
 <div dir="rtl">
-Speaker notes here...
-</div>
---> 
+העבודה הזו נכנסת לתחום אחר בעייתי והוא באגים שנובעים ממקביליות של תהליכים, שלפעמים רואים אותם ובד"כ לא. הבאגים האלו קשים מאוד לזיהוי. שיטות כמו stress test לא יעילות כי הן לא מחפשות באזור מסויים.
 
+בעבודה הזו אנחנו מאמנים מודל ML שחוזה את הסיכוי לתקלה.
+אנחנו משתמשים במודל בשביל להנחות את החיפוש ולייצר מסלולים שכנראה גם יפלו בגלל הגןף 
+</div>
+-->
 
 ---
 
