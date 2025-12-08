@@ -14,14 +14,15 @@ colorSchema: "light"
 
 ### Achiya Elyasaf & Gera Weiss  
 Faculty of Computer and Information Science   
-Ben-Gurion University of the Negev 
+Ben-Gurion University of the Negev
 
 <!--
 <div dir="rtl">
 לפני מספר שנים, גרא ואני החלטנו להקים חברת סטארט אפ בתחום של בדיקות תוכנה.
 כל הקמה של חברה חדשה היא כמובן מורכבת ומאתגרת, אבל בתהליך שאנחנו עשינו, ועדיין עושים, יש מרכיבים רבים המשלבים אקדמיה ותעשייה באופן שעשוי לעניין את הקהל שיושב פה ולכן חשבנו שזה נושא טוב לסמינר.
 </div>
---> 
+21 seconds
+-->
 
 ---
 
@@ -62,8 +63,13 @@ Ben-Gurion University of the Negev
 <div dir="rtl">
 אז כמו כל סטרט אפ - זה מתחיל ברעיון שישנה את העולם. במקרה שלנו, היתה לנו פרדיגמת תכנות חדשה, שנדבר עליה בהמשך, שהאמנו שהיא יכולה לשנות לטובה את עולם התכנות.
 
+אבל עולם פיתוח התוכנה לא יזנח בבת אחת את object oriented וכדי לחדור צריך אסטרטגיה טובה.
 
+בעקבות פרויקט מוצלח עם התעשיה האווירית, שגם עליו נדבר, חשבנו על עולם הטסטים - כל החברות רוצות בדיקות מערכת יותר טובות ולרוב אין משהו בסיסי איכותי להתחיל איתו. 
+
+פה התחלנו. בדקנו את הרעיון בניסוי עם המחלקה לניהול ויצאנו לדרך. 
 </div>
+45 seconds
 -->
 
 ---
@@ -74,22 +80,23 @@ Ben-Gurion University of the Negev
 
 - **2010–2020** — Research expansion  
 - **2017–2020** — BPjs implementation & public open source release
-- **2021** — Registered a patent on BPjs for testing
+- **2021** — COBP development & patent registeration on BPjs for testing
 - **2022** — Provengo founded via Oasis accelerator  
 - **2022–present** — Customer successes + platform development
 - **2022–present** — Research expansion in collaboration with Provengo
 
 <img src="/timeline_comic_david.png" class="absolute bottom-10 right-10 w-70" alt="Timeline Comic" />
 
-
-
-
-
 <!--
 <div dir="rtl">
-Speaker notes here...
+ב 2010, דוד הראל, גרא וייס ואסף מרון פיתחו את פרדיגמת התכנות - "תכנות התנהגותי" (או בקצרה BP). הפרדיגמה עברה תהליך הבשלה מחקרי במשך עשור. שבסיומו עלה לאוויר כלי קוד פתוח בשם BPjs, שמאפשר לפתח תוכנות התנהגותיות, לחבר אותם לכלים חיצוניים, ולבצע בדיקות פורמליות של התוכנות.
+
+ב 2021 הפרדיגמה עברה הרחבה לתכנות התנהגותי מבוסס הקשרים, מה שאפשר לפרדיגמה להיות יותר פרקטית למערכות גדולות והגשנו פטנט על בדיקות מבוססות BP.
+
+אחרי הפטנט התחלנו תהליך של מסחור ביחד עם BGN ו Oasis והקמנו את פרובנגו.  שיתוף הפעולה הזה ממשיך גם היום גם בפן המחקרי וגם בפן העסקי.
 </div>
---> 
+60 seconds
+-->
 
 ---
 
@@ -130,9 +137,12 @@ Speaker notes here...
 
 <!--
 <div dir="rtl">
-Speaker notes here...
+כאמור, בבסיס של פרובנגו יושבת פרדיגמת תכנות בשם "תכנות התנהגותי". הרעיון הבסיסי של הפרדימה זה alignment, או תאימות בין הדרישות של המערכת לבין המודולים של הקוד. כל דרישה מתורגמת לתסריט בודד שאומר מה המערכת יכולה לעשות, צריכה לעשות, ואסור לה לעשות. 
+
+את הספסיפיקציה הזו אנחנו יודעים להריץ באופן אוטומטי כך שכל התסריטים תמיד מתקיימים. באופן זה אנחנו מקבלים מערכת ריאקטיבית עובדת.
 </div>
---> 
+40 seconds
+-->
 
 ---
 
@@ -141,7 +151,7 @@ Speaker notes here...
 <div class="grid grid-cols-2 gap-4">
 <div>
 
-```javascript {all|2,7,13,20|3,7,14,20|3,8,13,21|8,14,20|13,21}
+```javascript {1-9|1-9|all|2,7,13,20|3,7,14,20|3,8,13,21|8,14,20|13,21}
 bthread("Hot", function() {
   request("HOT")
   request("HOT")
@@ -174,11 +184,19 @@ bthread("No two COLD in a row", function() {
 
 ### Execution Trace
 
-<div class="bg-gray-100 p-4 rounded  font-mono text-sm">
-  <div v-click="1">1. HOT</div>
-  <div v-click="2">2. COLD</div>
-  <div v-click="3">3. HOT</div>
-  <div v-click="4">4. COLD</div>
+<div class="bg-gray-100 p-4 rounded font-mono text-sm grid grid-cols-1">
+  <div v-click="1" v-click.hide="2" class="col-start-1 row-start-1">
+    HOT, HOT, COLD, COLD<br>
+    HOT, COLD, HOT, COLD<br>
+    HOT, COLD, COLD, HOT<br>
+    ...
+  </div>
+  <div class="col-start-1 row-start-1">
+    <div v-click="3">1. HOT</div>
+    <div v-click="4">2. COLD</div>
+    <div v-click="5">3. HOT</div>
+    <div v-click="6">4. COLD</div>
+  </div>
 </div>
 
 <br>
@@ -197,11 +215,15 @@ bthread("No two COLD in a row", function() {
 
 </div>
 </div>
+
 <!--
 <div dir="rtl">
-Speaker notes here...
+כדי להבין את הפרדימה, יש פה דוגמת צעצוע, hello world.
+
+בואו נניח מערכת עם שתי דרישות: כשהמערכת עולה צריך לשפוך פעמיים חמים ופעמיים מים קרים. במערכת כזו יש מספר ריצות אקראיות. (קליק)
 </div>
---> 
+150 seconds
+-->
 
 ---
 
@@ -246,9 +268,14 @@ Speaker notes here...
 
 <!--
 <div dir="rtl">
-Speaker notes here...
+ב 2021, מיכאל בר-סיני, אז דוקטורנט של גרא, פיתח את BPjs. 
+
+בפלטפורמה זו, המפתח כותב תוכנות BP ב javascript. כדי להריץ, יש פה stack שלם שעוטף את התוכנה ומריץ JS בתוך מנוע rhino של מוזילה שרץ על java. 
+ 
+הסיבה לערימה הזו היא שזה מאפשר לנו לבצע וריפיקציה פורמלית של תכונות בטיחות וחיות של המערכת. זה גם מאפשר לנו חיבור למערכות אחרות, וזה מאפשר גמישות בהרחבות לפרדיגמה. 
 </div>
---> 
+35 seconds
+-->
 
 ---
 
@@ -270,9 +297,13 @@ Speaker notes here...
 
 <!--
 <div dir="rtl">
-Speaker notes here...
+כשאנחנו נוהגים במכונית, אנחנו צריכים לשלוט בה בכל רגע נתון. כמה גז לתת, מתי ללחוץ על הברקס, הגה, וכו'. הסוס הוא חיה תבונית. הנהג רק צריך לומר לו לזוז קדימה, והסוס יודע איך להמנע ממכשולים ואיך לא ליפול לצדדים.
+
+BP מאפשר את אותו הדבר כמו הסוס. תגדיר רק את הדרישות, מה מותר מה אסור ומה צריך - ואנחנו נדע להריץ את זה באופן נכון, בניגוד למשל ל LLM.
+
+זה החזון שלנו לעולם התכנות.
 </div>
---> 
+-->
 
 ---
 
@@ -304,7 +335,9 @@ Speaker notes here...
 
 <div class="relative h-full w-full">
   <div class="absolute inset-0 flex items-start justify-center pt-4">
-    <Youtube id="spmH5sjIwN8" :width="560" :height="315" autoplay="true" />
+    <video controls autoplay muted loop class="w-full h-auto rounded-lg shadow-lg">
+      <source src="/On-Board_Satellite_Software_Development_Testing.mp4" type="video/mp4">
+    </video>
   </div>
 
   <img src="/iai_logo_new.png" class="absolute -top-20 right-10 h-16 object-contain" alt="IAI Logo" />
@@ -319,13 +352,14 @@ Speaker notes here...
 </div>
 </div>
 
-
-
 <!--
 <div dir="rtl">
-Speaker notes here...
+אוקי, אז עד עכשיו, ראינו את הפרדיגמה על דוגמת צעצוע, אבל מה אפשר לעשות עם זה?
+
+ב-2020 התחלנו פרויקט עם התעשייה האווירית, בו 
+
 </div>
---> 
+-->
 
 ---
 
@@ -763,16 +797,16 @@ layout: default
 <div class="grid grid-cols-[55%_45%] gap-8 items-center mt-8">
 <div class="space-y-4">
 
-- <strong class="text-blue-800">The SUT</strong>: An online store (Magento).
+- <strong class="text-blue-800">The SUT</strong>: An online store (Prestashop).
 - <strong class="text-blue-800">The Approach</strong>:
     - **Separation of Concerns**: We modeled the low-level interactions (Login, Add to Cart) separately from the high-level integration model.
     - **Goal**: Verify end-to-end flows.
 - <strong class="text-blue-800">The Bugs</strong>:
-    - Found critical logic bugs in Magento related to inventory management and checkout flows.
+    - Found critical logic bugs in Prestashop related to inventory management and checkout flows.
 
 </div>
 <div class="flex items-center justify-center">
-  <img src="/slides_images/magento_store_luma.png" class="h-80 w-auto rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
+  <img src="/prestashop_screenshot.png" class="h-80 w-auto rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
 </div>
 </div>
 
