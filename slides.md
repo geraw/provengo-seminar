@@ -727,7 +727,7 @@ layout: default
 <strong>Venue:</strong> IEEE/ACM International Conference on Automated Software Engineering (ASE) 2023
 </div>
 
-<div class="grid grid-cols-[55%_45%] gap-8 items-center mt-8">
+<div class="grid grid-cols-[55%_45%] gap-8 items-center mt-3">
 <div class="space-y-4">
 
 - <strong class="text-blue-800">Active Requirements</strong>: Transforms static requirements into executable code that validates the system.
