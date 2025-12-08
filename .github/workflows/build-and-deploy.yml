@@ -38,7 +38,7 @@ jobs:
         run: npm run build
 
       - name: Export Slidev to PDF
-        run: npm run export
+        run: npm run export --wait 1000 # Wait 1 second per slide
 
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
