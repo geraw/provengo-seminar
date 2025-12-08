@@ -709,7 +709,7 @@ layout: default
 
 <img src="/provengo_logo_transparent.png" class="absolute top-6 right-6 w-24 z-50" />
 
-# Demo: Insurance Claims Processing
+# Case Study: Insurance Claims Processing
 
 | Challenge | Solution | Impact |
 | --- | --- | --- |
@@ -720,7 +720,7 @@ layout: default
   <img src="/slides_images/insurance_support.png" class="w-full h-60 rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
 </div>
 
-
+ 
 <!--
 <div dir="rtl">
 Speaker notes here...
@@ -757,7 +757,7 @@ layout: default
 
 <img src="/provengo_logo_transparent.png" class="absolute top-6 right-6 w-24 z-50" />
 
-# Case Study: Testing an Online Store
+# Demo: Testing an Online Store
 ## Modeling Low-Level Interactions Separate from High-Level Integration
 
 <div class="grid grid-cols-[55%_45%] gap-8 items-center mt-8">
