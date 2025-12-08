@@ -817,14 +817,16 @@ Speaker notes here...
 <div class="space-y-4">
 
 - <strong class="text-blue-800">Composition</strong>:
+
     - We compose the low-level blocks (Open page, Login, Add to cart, Checkout) into high-level scenarios.
+
 - <strong class="text-blue-800">Verification</strong>:
     - We can verify "Admin takes item out of stock" vs "User tries to buy item".
     - Provengo explores the interleavings of these scenarios.
     
 </div>
 <div class="flex items-center justify-center">
-  <img src="/slides_images/online_store_end_to_end.png" class="w-full rounded-lg shadow-xl border-2 border-gray-100" />
+  <img src="/slides_images/online_store_end_to_end.png" class="w-full" />
 </div>
 </div>
 

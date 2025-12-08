@@ -73,7 +73,7 @@ def crop_header(image_path):
         print(f"Error processing {image_path}: {e}")
 
 base_dir = r"c:\Users\geraw\provengo-seminar\public\slides_images"
-images = ["online_store_login.png", "online_store_add_to_cart.png"]
+images = ["online_store_end_to_end.png"]
 
 for img_name in images:
     crop_header(os.path.join(base_dir, img_name))
