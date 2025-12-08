@@ -538,6 +538,243 @@ A layered architecture for model-based testing:
 -->
 
 ---
+layout: default
+---
+
+<img src="/provengo_logo_transparent.png" class="absolute top-6 right-6 w-24 z-50" />
+
+# Demo: Testing an Online Store
+## Modeling Low-Level Interactions Separate from High-Level Integration
+
+<div class="grid grid-cols-[55%_45%] gap-8 items-center mt-8">
+<div class="space-y-4">
+
+- <strong class="text-blue-800">The SUT</strong>: An online store (Prestashop).
+- <strong class="text-blue-800">The Approach</strong>:
+    - **Separation of Concerns**: We modeled the low-level interactions (Login, Add to Cart) separately from the high-level integration model.
+    - **Goal**: Verify end-to-end flows.
+- <strong class="text-blue-800">The Bugs</strong>:
+    - Found critical logic bugs related to inventory management and checkout flows.
+
+</div>
+<div class="flex items-center justify-center">
+  <img src="/prestashop_screenshot.png" class="h-80 w-auto rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
+</div>
+</div>
+
+<!--
+<div dir="rtl">
+אז כדי להבין על מה מדובר, הנה דוגמה שמראה איך אנחנו משתמשים בפרובנו בשביל לבדוק אתר רכישות אונליין. 
+
+אנחנו נבדוק שני סיפורים:
+1. הוספת מוצרים לעגלה, מעבר ל checkout ובדיקה שהמחיר תואם את מה שצריך להיות. 
+2. כניסה של מנהל לחנות והוצאת מוצר מהמלאי.
+
+מדובר בשני תסריטים שונים, שבמקרים מסויימים - עשויים להתנגש. ההתנהגות הרצויה של המערכת שונה אם המנהל הוציא את המוצר לפני שהמשתמש הוסיף אותו לעגלה, אחרי שהוא חיפש אותו ולפני שהוא הוסיף אותו, וכו'.
+
+פה בדיוק הכח של פרובנגו. ככותבי המודל אנחנו לא נדרשים לחשוב מראש על אינטרקציות בעייתיות. אנחנו רק צריכים לכתוב תסריטים שאנחנו רוצים לבדוק, והמערכת שלנו תדע לשזור אותם יחד וליצור תסריטים מגוונים ומעניינים.
+
+אני כבר אציין שבאופן זה מצאנו באג קריטי במערכת שקשור לתסריטים האלו.
+</div>
+60 seconds.
+-->
+
+---
+
+# Prestashop Demonstration
+
+<script setup>
+import { ref, onMounted } from 'vue'
+
+const videoEl = ref(null)
+
+onMounted(() => {
+  if (videoEl.value) {
+    videoEl.value.currentTime = 90
+    videoEl.value.playbackRate = 3
+  }
+})
+</script>
+
+<div class="grid grid-cols-[60%_40%] gap-2 mt-4 h-full">
+
+<!-- Left Column: Explanations -->
+<div class="grid grid-cols-1">
+  
+  <!-- Phase 1: Low-Level Interactions (Visible initially, Hidden on Click 1) -->
+  <div v-click.hide="1" class="col-start-1 row-start-1 space-y-2">
+    <div>
+      <h3 class="text-xl font-bold text-blue-800">Low-Level Interactions</h3>
+      <h4 class="text-lg text-gray-500">Reusable Sub-Models</h4>
+    </div>
+    
+  <div class="flex flex-col gap-0">
+    <div class="flex flex-col items-center">
+        <strong class="mb-1 text-sm text-blue-800">Login Model</strong>
+        <img src="/slides_images/online_store_login.png" class="w-full" />
+    </div>
+    <div class="flex flex-col items-center">
+        <strong class="mb-1 text-sm text-blue-800">Add to Cart Model</strong>
+        <img src="/slides_images/online_store_add_to_cart.png" class="w-full shadow-md rounded-lg" />
+    </div>
+  </div>
+  </div>
+
+  <!-- Phase 2: High-Level Integration (Visible on Click 1) -->
+  <div v-click="1" class="col-start-1 row-start-1 space-y-4">
+    <div>
+      <h3 class="text-xl font-bold text-blue-800">High-Level Integration</h3>
+      <h4 class="text-lg text-gray-500">Composing End-to-End Tests</h4>
+    </div>
+
+  <div class="space-y-2 text-sm">
+    <div class="bg-blue-50 p-1 rounded">
+      <strong class="text-blue-800 block mb-0">Composition</strong>
+      We compose the low-level blocks into high-level scenarios.
+    </div>
+    <div class="bg-blue-50 p-1 rounded">
+      <strong class="text-blue-800 block mb-0">Verification</strong>
+      We can verify "Admin takes item out of stock" vs "User tries to buy item". Provengo explores the interleavings.
+    </div>
+    <img src="/slides_images/online_store_end_to_end.png" class="w-full shadow-md rounded-lg mt-2" />
+  </div>
+  </div>
+
+</div>
+
+<!-- Right Column: Video -->
+<div class="flex items-start justify-center h-full pt-20">
+    <video ref="videoEl" controls autoplay muted loop class="w-full h-auto rounded-lg shadow-lg">
+      <source src="/Provengo-BPFlow-PrestaShop.mp4" type="video/mp4">
+    </video>
+</div>
+
+</div>
+
+<!--
+<div dir="rtl">
+בזמן שאני אסביר לכם, אתם יכולים לראות בצד ימין אתם סרטון בו אני מדגים את השימוש במערכת.
+
+המימוש שאנחנו נראה הוא באמצעות שפה ויזואלית שפיתחנו לכתיבת תוכניות BP. אנחנו קוראים לזה BP-Flow.
+
+לתוכנית יש שני חלקים. החלק הראשון הוא כתיבת אוסף תסריטים קטנים שכל אחד מגדיר פעולה לוגית במערכת ואיך מבצעים אותה בפועל. למשל, התסריט העליון בצד שמאל מגדיר כיצד פעולת הלוגין מתבצעת. כשהמערכת עולה התסריט ממתין לאירוע login. כאשר זה קורה הוא לוחץ על כפתור login במסך, מקיש שם משתמש וסיסמה באיזה סדר שרוצים, ולבסוף לוחץ enter.
+
+התסריט התחתון כבר יותר מורכב. בהנתן אירוע Add To Cart, הוא מקבל כפרמטר את המוצר אותו צריך להוסיף לעגלה ואת הפרמטרים שלו (למשל צבע וכמות). עכשיו הוא יחפש את המוצר בחנות, יכנס לעמוד שלו, יבחר את הפרמטרים המתאימים ויוסיף אותו לעגלה.
+
+באופן זה ניצור אוסף של פעולות בסיסיות ומהן עכשיו אפשר ליצור הרבה מאוד תסריטים. *(קליק)*
+
+אז בשלב השני אנחנו מגדירים תסריטים מתוך אותם אבני יסוד. כמו למשל הפעולות של המשתמש והמנהל בחנות.
+
+המנוע שלנו יודע לשזור את התסריטים וגם לוודא קיום תכונות של המערכת.
+</div>
+90 seconds
+-->
+
+---
+
+<img src="/provengo_logo_transparent.png" class="absolute top-6 right-6 w-24 z-50" />
+
+# Generating Test Suites
+## From Model to Coverage
+
+<div class="grid grid-cols-[50%_50%] gap-8 items-center mt-8">
+<div class="space-y-4">
+
+- <strong class="text-blue-800">Automatic Generation</strong>:
+    - We use Provengo to generate a test suite that satisfies specific coverage criteria.
+    - We can explicitly request scenarios that hit specific events or states.
+
+</div>
+<div class="flex flex-col items-start bg-gray-900 rounded-lg p-4 text-white font-mono text-sm overflow-x-auto w-full">
+<div class="text-gray-400 mb-2"># Generate tests covering "Out of Stock" events</div>
+
+```bash
+provengo analyze -f html \
+  --coverage-goal "event(OutOfStock)" \
+  --limit 100
+```
+
+<div class="text-gray-400 mt-4 mb-2"># Run the generated suite</div>
+
+```bash
+provengo run --test-suite suite-1
+```
+</div>
+</div>
+
+
+<!--
+<div dir="rtl">
+Speaker notes here...
+</div>
+--> 
+
+---
+
+# Generalized Coverage Criteria for <br> Combinatorial Sequence Testing
+
+<div class="text-sm">
+
+<div class="text-gray-500 mb-4">
+Achiya Elyasaf, Eitan Farchi, Oded Margalit, Gera Weiss, Yeshayahu Weiss, <br> IEEE Transactions on Software Engineering (2023)
+</div>
+
+<img src="/combinatorial_testing_illustration.png" class="absolute top-10 right-10 w-60 rounded-lg shadow-lg border border-gray-200 z-10" />
+
+- <span class="text-red-600 font-bold">The Challenge</span><br>
+  - How to effectively verify systems with infinite state spaces and complex sequences? <br> <br>
+- <span class="text-blue-600 font-bold">Generalized Coverage</span>
+  - Extending combinatorial interaction testing (CIT) to **event sequences**.
+  - Allows testers to define *projection functions* that capture domain-specific "interesting" behaviors. <br> <br>
+- <span class="text-purple-600 font-bold">Statistical Approach</span> 
+  - **Bayesian Risk Assessment**: Quantifies the probability of remaining bugs based on observed successful executions.
+  - **Exploration vs. Exploitation**: Balances covering new behavioral patterns vs. deepening coverage of known risky areas. <br> <br>
+- <span class="text-green-600 font-bold">Practical Outcome</span>
+  - A mathematically grounded method to generate minimized, high-coverage test suites from BP models.
+</div>
+
+<!--
+<div dir="rtl">
+Speaker notes here...
+</div>
+--> 
+
+---
+
+# Black-Box Bug Amplification <br> for Multithreaded Software
+
+<div class="text-sm">
+
+<div class="text-gray-500 mb-4">
+Yeshayahu Weiss, Gal Amram, Achiya Elyasaf, Eitan Farchi, Oded Margalit, Gera Weiss, <br> Mathematics (2025)
+</div>
+
+<img src="/bug_amplification_16_10.png" class="absolute top-4 right-10 w-50 rounded-lg shadow-lg border border-gray-200 z-10 object-cover" />
+
+- <span class="text-red-600 font-bold">The Problem</span>
+  - **Heisenbugs**: Concurrency bugs that are rare, non-deterministic, and often vanish when instrumented.
+  - Traditional testing (random/stress) is inefficient at finding these low-probability events.
+
+- <span class="text-blue-600 font-bold">Black-Box Learning</span>
+  - Treating the system and scheduler as valid black boxes.
+  - Training **predictive models** on execution traces to estimate failure probabilities.
+
+- <span class="text-green-600 font-bold">Amplification Loop</span>
+  - **Feedback-Directed Search**: Using the model to guide the test generation towards input regions with higher suspected bug density.
+  - **Order-of-Magnitude Improvement**: Demonstrated 10x+ increase in bug manifestation rates compared to random baselines.
+
+</div>
+
+
+
+<!--
+<div dir="rtl">
+Speaker notes here...
+</div>
+--> 
+
+
+---
 
 <img src="/provengo_logo_transparent.png" class="absolute top-6 right-6 w-24 z-50" />
 
@@ -812,218 +1049,6 @@ layout: default
 <div class="flex items-center justify-center mt-8">
   <img src="/slides_images/bank_sso_success.png" class="w-full h-60 rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
 </div>
-
-
-<!--
-<div dir="rtl">
-Speaker notes here...
-</div>
---> 
-
----
-layout: default
----
-
-<img src="/provengo_logo_transparent.png" class="absolute top-6 right-6 w-24 z-50" />
-
-# Demo: Testing an Online Store
-## Modeling Low-Level Interactions Separate from High-Level Integration
-
-<div class="grid grid-cols-[55%_45%] gap-8 items-center mt-8">
-<div class="space-y-4">
-
-- <strong class="text-blue-800">The SUT</strong>: An online store (Prestashop).
-- <strong class="text-blue-800">The Approach</strong>:
-    - **Separation of Concerns**: We modeled the low-level interactions (Login, Add to Cart) separately from the high-level integration model.
-    - **Goal**: Verify end-to-end flows.
-- <strong class="text-blue-800">The Bugs</strong>:
-    - Found critical logic bugs in Prestashop related to inventory management and checkout flows.
-
-</div>
-<div class="flex items-center justify-center">
-  <img src="/prestashop_screenshot.png" class="h-80 w-auto rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
-</div>
-</div>
-
-<!--
-<div dir="rtl">
-Speaker notes here...
-</div>
---> 
-
----
-
-# Prestashop Demonstration
-
-<script setup>
-import { ref, onMounted } from 'vue'
-
-const videoEl = ref(null)
-
-onMounted(() => {
-  if (videoEl.value) {
-    videoEl.value.currentTime = 90
-    videoEl.value.playbackRate = 3
-  }
-})
-</script>
-
-<div class="grid grid-cols-[60%_40%] gap-2 mt-4 h-full">
-
-<!-- Left Column: Explanations -->
-<div class="grid grid-cols-1">
-  
-  <!-- Phase 1: Low-Level Interactions (Visible initially, Hidden on Click 1) -->
-  <div v-click.hide="1" class="col-start-1 row-start-1 space-y-2">
-    <div>
-      <h3 class="text-xl font-bold text-blue-800">Low-Level Interactions</h3>
-      <h4 class="text-lg text-gray-500">Reusable Sub-Models</h4>
-    </div>
-    
-  <div class="flex flex-col gap-0">
-    <div class="flex flex-col items-center">
-        <strong class="mb-1 text-sm text-blue-800">Login Model</strong>
-        <img src="/slides_images/online_store_login.png" class="w-full" />
-    </div>
-    <div class="flex flex-col items-center">
-        <strong class="mb-1 text-sm text-blue-800">Add to Cart Model</strong>
-        <img src="/slides_images/online_store_add_to_cart.png" class="w-full shadow-md rounded-lg" />
-    </div>
-  </div>
-  </div>
-
-  <!-- Phase 2: High-Level Integration (Visible on Click 1) -->
-  <div v-click="1" class="col-start-1 row-start-1 space-y-4">
-    <div>
-      <h3 class="text-xl font-bold text-blue-800">High-Level Integration</h3>
-      <h4 class="text-lg text-gray-500">Composing End-to-End Tests</h4>
-    </div>
-
-  <div class="space-y-2 text-sm">
-    <div class="bg-blue-50 p-1 rounded">
-      <strong class="text-blue-800 block mb-0">Composition</strong>
-      We compose the low-level blocks into high-level scenarios.
-    </div>
-    <div class="bg-blue-50 p-1 rounded">
-      <strong class="text-blue-800 block mb-0">Verification</strong>
-      We can verify "Admin takes item out of stock" vs "User tries to buy item". Provengo explores the interleavings.
-    </div>
-    <img src="/slides_images/online_store_end_to_end.png" class="w-full shadow-md rounded-lg mt-2" />
-  </div>
-  </div>
-
-</div>
-
-<!-- Right Column: Video -->
-<div class="flex items-start justify-center h-full pt-20">
-    <video ref="videoEl" controls autoplay muted loop class="w-full h-auto rounded-lg shadow-lg">
-      <source src="/Provengo-BPFlow-PrestaShop.mp4" type="video/mp4">
-    </video>
-</div>
-
-</div>
-
-<!--
-<div dir="rtl">
-Speaker notes here...
-</div>
---> 
-
----
-
-<img src="/provengo_logo_transparent.png" class="absolute top-6 right-6 w-24 z-50" />
-
-# Generating Test Suites
-## From Model to Coverage
-
-<div class="grid grid-cols-[50%_50%] gap-8 items-center mt-8">
-<div class="space-y-4">
-
-- <strong class="text-blue-800">Automatic Generation</strong>:
-    - We use Provengo to generate a test suite that satisfies specific coverage criteria.
-    - We can explicitly request scenarios that hit specific events or states.
-
-</div>
-<div class="flex flex-col items-start bg-gray-900 rounded-lg p-4 text-white font-mono text-sm overflow-x-auto w-full">
-<div class="text-gray-400 mb-2"># Generate tests covering "Out of Stock" events</div>
-
-```bash
-provengo analyze -f html \
-  --coverage-goal "event(OutOfStock)" \
-  --limit 100
-```
-
-<div class="text-gray-400 mt-4 mb-2"># Run the generated suite</div>
-
-```bash
-provengo run --test-suite suite-1
-```
-</div>
-</div>
-
-
-<!--
-<div dir="rtl">
-Speaker notes here...
-</div>
---> 
-
----
-
-# Generalized Coverage Criteria for <br> Combinatorial Sequence Testing
-
-<div class="text-sm">
-
-<div class="text-gray-500 mb-4">
-Achiya Elyasaf, Eitan Farchi, Oded Margalit, Gera Weiss, Yeshayahu Weiss, <br> IEEE Transactions on Software Engineering (2023)
-</div>
-
-<img src="/combinatorial_testing_illustration.png" class="absolute top-10 right-10 w-60 rounded-lg shadow-lg border border-gray-200 z-10" />
-
-- <span class="text-red-600 font-bold">The Challenge</span><br>
-  - How to effectively verify systems with infinite state spaces and complex sequences? <br> <br>
-- <span class="text-blue-600 font-bold">Generalized Coverage</span>
-  - Extending combinatorial interaction testing (CIT) to **event sequences**.
-  - Allows testers to define *projection functions* that capture domain-specific "interesting" behaviors. <br> <br>
-- <span class="text-purple-600 font-bold">Statistical Approach</span> 
-  - **Bayesian Risk Assessment**: Quantifies the probability of remaining bugs based on observed successful executions.
-  - **Exploration vs. Exploitation**: Balances covering new behavioral patterns vs. deepening coverage of known risky areas. <br> <br>
-- <span class="text-green-600 font-bold">Practical Outcome</span>
-  - A mathematically grounded method to generate minimized, high-coverage test suites from BP models.
-</div>
-
-<!--
-<div dir="rtl">
-Speaker notes here...
-</div>
---> 
-
----
-
-# Black-Box Bug Amplification <br> for Multithreaded Software
-
-<div class="text-sm">
-
-<div class="text-gray-500 mb-4">
-Yeshayahu Weiss, Gal Amram, Achiya Elyasaf, Eitan Farchi, Oded Margalit, Gera Weiss, <br> Mathematics (2025)
-</div>
-
-<img src="/bug_amplification_16_10.png" class="absolute top-4 right-10 w-50 rounded-lg shadow-lg border border-gray-200 z-10 object-cover" />
-
-- <span class="text-red-600 font-bold">The Problem</span>
-  - **Heisenbugs**: Concurrency bugs that are rare, non-deterministic, and often vanish when instrumented.
-  - Traditional testing (random/stress) is inefficient at finding these low-probability events.
-
-- <span class="text-blue-600 font-bold">Black-Box Learning</span>
-  - Treating the system and scheduler as valid black boxes.
-  - Training **predictive models** on execution traces to estimate failure probabilities.
-
-- <span class="text-green-600 font-bold">Amplification Loop</span>
-  - **Feedback-Directed Search**: Using the model to guide the test generation towards input regions with higher suspected bug density.
-  - **Order-of-Magnitude Improvement**: Demonstrated 10x+ increase in bug manifestation rates compared to random baselines.
-
-</div>
-
 
 
 <!--
