@@ -684,7 +684,7 @@ onMounted(() => {
     - We use Provengo to generate a test suite that satisfies specific coverage criteria.
     - For example, we can explicitly request scenarios that hit specific events or states.
 
-<div class="flex flex-col items-start bg-gray-900 rounded-lg p-4 text-white font-mono text-xs overflow-x-auto w-full scale-70 origin-top-left">
+<div class="flex flex-col items-start bg-gray-900 rounded-lg p-4 text-white font-mono text-xs overflow-x-auto w-full scale-70 origin-top-left ml-10">
 <div class="text-gray-400 mb-2"># Generate tests covering "Out of Stock" events</div>
 
 ```bash
