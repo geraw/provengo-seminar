@@ -37,14 +37,14 @@ jobs:
       - name: Build static site
         run: npm run build
 
-      - name: Export Slidev to PDF
-        run: npm run export -- --wait 1000 --timeout 60000 --wait-until none
+      # - name: Export Slidev to PDF
+      #   run: npm run export -- --wait 1000 --timeout 60000 --wait-until none
 
-      - name: Upload PDF artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: slidev-pdf
-          path: dist/slides.pdf
+      # - name: Upload PDF artifact
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: slidev-pdf
+      #     path: dist/slides.pdf
 
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
