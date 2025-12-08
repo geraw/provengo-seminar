@@ -81,7 +81,7 @@ Ben-Gurion University of the Negev
 - **2010–2020** — Research expansion  
 - **2017–2020** — BPjs implementation & public open source release
 - **2021** — COBP development & patent registeration on BPjs for testing
-- **2022** — Provengo founded via Oasis accelerator  
+- **2022** — Provengo founded via OAZIS accelerator  
 - **2022–present** — Customer successes + platform development
 - **2022–present** — Research expansion in collaboration with Provengo
 
@@ -450,7 +450,7 @@ onMounted(() => {
   <img src="/provengo_mbt_diagram.png" class="h-70 w-auto rounded-lg shadow-md border border-gray-200 object-contain" alt="Model-Based Testing Concept" />
   <div class="relative flex flex-col items-center">
     <img src="/provengo_founders_comic.png" class="h-30 w-auto rounded-lg shadow-xl border-0 border-gray-100 object-cover block" alt="Provengo Founders" />
-    <p class="absolute -bottom-10 text-[10px] text-center leading-none bg-white/80 px-1 rounded">Supported by OASIS</p>
+    <p class="absolute -bottom-10 text-[10px] text-center leading-none bg-white/80 px-1 rounded">Supported by OAZIS</p>
   </div>
 </div>
 </div>
@@ -682,15 +682,16 @@ onMounted(() => {
 
 - <strong class="text-blue-800">Automatic Generation</strong>:
     - We use Provengo to generate a test suite that satisfies specific coverage criteria.
-    - We can explicitly request scenarios that hit specific events or states.
+    - For example, we can explicitly request scenarios that hit specific events or states.
 
-<div class="flex flex-col items-start bg-gray-900 rounded-lg p-4 text-white font-mono text-xs overflow-x-auto w-full">
+<div class="flex flex-col items-start bg-gray-900 rounded-lg p-4 text-white font-mono text-xs overflow-x-auto w-full scale-70 origin-top-left ml-10">
 <div class="text-gray-400 mb-2"># Generate tests covering "Out of Stock" events</div>
 
 ```bash
-provengo analyze -f html \
+provengo ensemble \
+  --algorithm genetic \
   --coverage-goal "event(OutOfStock)" \
-  --limit 100
+  --size 1000
 ```
 
 <div class="text-gray-400 mt-4 mb-2"># Run the generated suite</div>
@@ -701,7 +702,7 @@ provengo run --test-suite suite-1
 </div>
 
 </div>
-<div class="flex items-center justify-center">
+<div class="flex items-center justify-center -mt-30">
   <img src="/provengo-graph.png" class="max-h-100 w-auto rounded-lg shadow-xl border-2 border-gray-100 object-contain" />
 </div>
 </div>
@@ -727,7 +728,7 @@ layout: default
 <strong>Venue:</strong> IEEE/ACM International Conference on Automated Software Engineering (ASE) 2023
 </div>
 
-<div class="grid grid-cols-[55%_45%] gap-8 items-center mt-8">
+<div class="grid grid-cols-[55%_45%] gap-8 items-center mt-3">
 <div class="space-y-4">
 
 - <strong class="text-blue-800">Active Requirements</strong>: Transforms static requirements into executable code that validates the system.
@@ -1168,7 +1169,7 @@ Speaker notes here...
 
 </div>
 <div class="flex items-center justify-center">
-  <img src="/slides_images/future_vision_engineering_interface.png" class="h-90 w-auto rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
+  <img src="/slides_images/future_vision_comic.png" class="h-90 w-auto rounded-lg shadow-xl border-2 border-gray-100 object-cover" />
 </div>
 </div>
 
