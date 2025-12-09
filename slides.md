@@ -126,7 +126,7 @@ Ben-Gurion University of the Negev
 
   <div class="flex flex-col items-center text-center">
     <h3 class="mb-4">Behavior</h3>
-    <img src="/bp_behavior_lego.png" class="h-40 w-auto object-contain" />
+    <AnimatedRobot />
     <p class="text-xs mt-2">A reactive system</p>
   </div>
 </div>
