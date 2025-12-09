@@ -2,6 +2,7 @@
 theme: default
 title: "From Behavioral Programming Research to Provengo"
 colorSchema: "light"
+transitionn: slide
 ---
 
 # From Research to Startup  
@@ -812,6 +813,14 @@ Yeshayahu Weiss, Gal Amram, Achiya Elyasaf, Eitan Farchi, Oded Margalit, Gera We
 </div>
 
 <img src="/bug_amplification_16_10.png" class="absolute top-4 right-10 w-50 rounded-lg shadow-lg border border-gray-200 z-10 object-cover" />
+
+<div class="absolute bottom-60 right-10 flex items-center gap-3 bg-white/90 p-2 rounded-lg shadow-sm border border-gray-100 z-50">
+  <img src="/yeshayahu_weiss_nobg.png" class="w-12 h-12 rounded-full border border-gray-200 object-cover" />
+  <div class="text-xs text-left leading-tight">
+    <div class="font-bold">Yeshayahu Weiss</div>
+    <div class="text-gray-500">Lead Researcher</div>
+  </div>
+</div>
 
 - <span class="text-red-600 font-bold">The Problem</span>
   - **Heisenbugs**: Concurrency bugs that are rare, non-deterministic, and often vanish when instrumented.
