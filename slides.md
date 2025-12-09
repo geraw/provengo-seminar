@@ -87,6 +87,8 @@ Ben-Gurion University of the Negev
 - **2022–present** — Research expansion in collaboration with Provengo
 
 <img src="/timeline_comic_david.png" class="absolute bottom-10 right-10 w-70" alt="Timeline Comic" />
+<img src="/oazis_logo.png" class="absolute bottom-20 left-40 w-40" alt="OAZIS Logo" />
+<img src="/cacm_title.png" class="absolute top-15 left-120 w-40 shadow-md border border-gray-100" alt="CACM Title" />
 
 <!--
 <div dir="rtl">
